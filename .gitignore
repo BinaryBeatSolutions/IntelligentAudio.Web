@@ -1,2 +1,30 @@
 .vercel
 .env*.local
+
+## Visual Studio specifika filer
+.vs/
+[Bb]in/
+[Ob]j/
+*.user
+*.userosscache
+*.sln.doccache
+*.suo
+*.userprefs
+*.dbmdl
+*.jsproj.user
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+## Node/Vercel specifika (för din webb-del)
+node_modules/
+.next/
+out/
+build/
+.vercel
+.env*.local
+
+## OS-specifika
+Thumbs.db
+.DS_Store
