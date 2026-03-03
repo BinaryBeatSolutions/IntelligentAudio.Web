@@ -7,8 +7,13 @@ export default function Home() {
         <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
           <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black">
            IntelligentAudio.NET
-          </h1>
-       </div> 
+         </h1>
+
+        <div className="text-lg text-white text-bold text-lg bg-pink-700 rounded-sm p-32 text-center">
+            <a href="https://github.com/BinaryBeatSolutions/IntelligentAudio.NET" target="_blank">https://github.com/BinaryBeatSolutions/IntelligentAudio.NET</a>
+        </div>
+        </div> 
+        
       </main>
     </div>
   );
