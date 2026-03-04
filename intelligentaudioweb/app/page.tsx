@@ -9,9 +9,16 @@ export default function LandingPage() {
         <div className="min-h-screen bg-[#02040a] text-slate-50 font-sans selection:bg-blue-500/30">
             {/* Subtle blue top-down gradient */}
             <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(56,189,248,0.04),transparent)] pointer-events-none" />
-
+            <div
+                className="absolute inset-0 z-0 flex opacity-30 pointer-events-none"
+                style={{
+                    backgroundImage: "url('/bg.png')",
+                    backgroundSize: 'contain',
+                    backgroundPosition: 'top',
+                }}
+            />
             <main className="animate-in fade-in slide-in-from-bottom-4 duration-1000 ease-out relative max-w-6xl mx-auto px-6 py-24">
-
+                
                 {/* HERO SECTION */}
                 <section className="text-center space-y-8 mb-32">
                     <Badge variant="outline" className="border-blue-500/30 text-blue-400 bg-blue-500/5 px-4 py-1 mb-4 animate-pulse">
@@ -69,6 +76,11 @@ export default function LandingPage() {
                         </CardContent>
                     </Card>
 
+                </div>
+
+
+                <div className="p-6 mt-6 bg-slate-950/40 border-slate-900 backdrop-blur-md hover:border-blue-500/20 transition-colors">
+                    IntelligentAudio.NET | Next-gen AI Voice Control for Ableton Live (Soon Fl-Studio, Logic). Built on .NET 10 LTS, this high-performance engine uses Whisper AI and Zero-Allocation <code>Span&lt;T&gt;</code> pipelines to bridge the gap between musical intent and the DAW. Real-time chord detection and transport control via OSC, engineered for zero latency
                 </div>
 
                 {/* TECH STACK FOOTER */}
