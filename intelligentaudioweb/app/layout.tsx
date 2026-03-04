@@ -14,8 +14,30 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "IntelligentAudio.NET",
-  description: "IntelligentAudio.NET",
+    description: "IntelligentAudio.NET", openGraph: {
+        title: 'IntelligentAudio.NET',
+        description: 'Ultra-low latency audio middleware for the AI era.',
+        url: 'https://intelligentaudio.net',
+        siteName: 'IntelligentAudio.NET',
+        images: [
+            {
+                url: 'https://intelligentaudio.net', // Länka till din bild
+                width: 1200,
+                height: 630,
+                alt: 'IntelligentAudio.NET Architecture Preview',
+            },
+        ],
+        locale: 'en_US',
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'IntelligentAudio.NET',
+        description: 'Zero-copy audio processing for .NET 10.',
+        images: ['https://intelligentaudio.net'],
+    },
 };
+
 
 export default function RootLayout({
   children,
