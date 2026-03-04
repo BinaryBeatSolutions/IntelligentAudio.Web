@@ -33,7 +33,7 @@ export default function LandingPage() {
                     </h1>
                     <p className="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto font-light leading-relaxed">
                         Decoupled audio engine for real-time processing.
-                        Engineered with <span className="text-blue-400 font-medium whitespace-nowrap">Zero-copy architecture</span> for next-generation local AI integration.
+                        Engineered with <span className="text-blue-400 font-medium whitespace-nowrap">Zero-copy architecture</span> for next-generation local AI integration with Event-Driven/Clean Architecture.
                     </p>
                     <div className="flex justify-center gap-4 pt-6">
                         <Button size="lg" className="bg-blue-600 hover:bg-blue-500 text-white px-10 rounded-sm transition-all font-semibold">
