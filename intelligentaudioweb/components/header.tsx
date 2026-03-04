@@ -26,10 +26,10 @@ export default function Header() {
 
                 {/* NAVIGATION */}
                 <nav className="flex items-center gap-8">
-                    <Link href="#features" className="text-[12px] uppercase tracking-widest text-slate-400 hover:text-blue-400 transition-colors font-medium">
-                        Engine
-                    </Link>
-                    <Link href="#architecture" className="text-[12px] uppercase tracking-widest text-slate-400 hover:text-blue-400 transition-colors font-medium">
+                    {/*<Link href="#features" className="text-[12px] uppercase tracking-widest text-slate-400 hover:text-blue-400 transition-colors font-medium">*/}
+                    {/*    Engine*/}
+                    {/*</Link>*/}
+                    <Link href="/architect" className="text-[12px] uppercase tracking-widest text-slate-400 hover:text-blue-400 transition-colors font-medium">
                         Architecture
                     </Link>
                     <Button asChild variant="outline" size="sm" className="border-blue-500/20 bg-blue-500/5 text-blue-400 hover:bg-blue-500 hover:text-white transition-all h-8 text-[11px] uppercase tracking-wider">

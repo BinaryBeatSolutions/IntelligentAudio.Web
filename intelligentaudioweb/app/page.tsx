@@ -80,7 +80,8 @@ export default function LandingPage() {
                         <span className="text-xs font-black text-white italic">Next.js 15</span>
                         <span className="text-xs font-black text-white italic">Whisper.NET</span>
                         <span className="text-xs font-black text-white italic">BuildSoft.OscCore</span>
-                        <span className="text-xs font-black text-white italic">Tailwind v4</span>
+                        <span className="text-xs font-black text-white italic">NextJs - Tailwind v4 -ShadUi</span>
+                        <span className="text-xs font-black text-white italic">CloudFlare DNS</span>
                     </div>
                 </footer>
 
