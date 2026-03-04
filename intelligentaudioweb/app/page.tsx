@@ -17,7 +17,7 @@ export default function LandingPage() {
                     <Badge variant="outline" className="border-blue-500/30 text-blue-400 bg-blue-500/5 px-4 py-1 mb-4 animate-pulse">
                         .NET 10 LTS + High Precision Audio
                     </Badge>
-                    <h1 className="text-6xl md:text-8xl font-bold tracking-tighter text-white">
+                    <h1 className="text-6xl md:text-6xl lg:text-8xl font-bold tracking-tighter text-white">
                         IntelligentAudio<span className="text-blue-500">.NET</span>
                     </h1>
                     <p className="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto font-light leading-relaxed">
