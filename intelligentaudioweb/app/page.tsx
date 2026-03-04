@@ -79,6 +79,7 @@ export default function LandingPage() {
                         <span className="text-xs font-black text-white italic">C# 14 / Span&lt;T&gt;</span>
                         <span className="text-xs font-black text-white italic">Next.js 15</span>
                         <span className="text-xs font-black text-white italic">Whisper.NET</span>
+                        <span className="text-xs font-black text-white italic">BuildSoft.OscCore</span>
                         <span className="text-xs font-black text-white italic">Tailwind v4</span>
                     </div>
                 </footer>
