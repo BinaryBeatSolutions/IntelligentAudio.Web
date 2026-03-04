@@ -83,7 +83,7 @@ export default function LandingPage() {
                 </div>
 
 
-                <div className="p-6 mt-6 bg-slate-950/40 border-slate-900 backdrop-blur-md hover:border-blue-500/20 transition-colors">
+                <div className="p-6 mt-6 bg-slate-950/40 text-lg border-slate-900 backdrop-blur-md hover:border-blue-500/20 transition-colors">
                     IntelligentAudio.NET | Next-gen AI Voice Control for Ableton Live (Soon Fl-Studio, Logic). Built on .NET 10 LTS, this high-performance engine uses Whisper AI and Zero-Allocation <code>Span&lt;T&gt;</code> pipelines to bridge the gap between musical intent and the DAW. Real-time chord detection and transport control via OSC, engineered for zero latency
                 </div>
 
