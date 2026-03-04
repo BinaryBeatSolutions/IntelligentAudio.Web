@@ -7,16 +7,20 @@ import Link from "next/link"
 export default function LandingPage() {
     return (
         <div className="min-h-screen bg-[#02040a] text-slate-50 font-sans selection:bg-blue-500/30">
-            {/* Subtle blue top-down gradient */}
-            <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(56,189,248,0.04),transparent)] pointer-events-none" />
+
             <div
                 className="absolute inset-0 z-0 flex opacity-30 pointer-events-none"
                 style={{
                     backgroundImage: "url('/bg.png')",
-                    backgroundSize: 'contain',
-                    backgroundPosition: 'top',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'top-0',
                 }}
             />
+
+
+            {/* Subtle blue top-down gradient */}
+            <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(56,189,248,0.04),transparent)] pointer-events-none" />
+        
             <main className="animate-in fade-in slide-in-from-bottom-4 duration-1000 ease-out relative max-w-6xl mx-auto px-6 py-24">
                 
                 {/* HERO SECTION */}
