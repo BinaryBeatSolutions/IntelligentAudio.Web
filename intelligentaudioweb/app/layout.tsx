@@ -32,6 +32,11 @@ export const metadata: Metadata = {
         locale: 'en_US',
         type: 'website',
     },
+    icons: {
+        icon: '/icon.png', // Sökväg relativt till 'public'-mappen eller automatisk från 'app'
+        // Du kan även lägga till apple-touch-icon här
+        apple: '/apple-icon.png',
+    },
     twitter: {
         card: 'summary_large_image',
         title: 'IntelligentAudio.NET',
