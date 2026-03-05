@@ -14,11 +14,16 @@ export default function Architect() {
         <div className="min-h-screen bg-[#02040a] text-slate-50 font-sans selection:bg-blue-500/30">
             <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(56,189,248,0.04),transparent)] pointer-events-none" />
             <main className="animate-in fade-in slide-in-from-bottom-4 duration-1000 ease-out relative max-w-6xl mx-auto px-6 py-24">
-            <header className="space-y-2">
+
+            <header className="space-y-4">
+                <div className="text-center space-y-8 mb-4">
+                    <Badge variant="outline" className="border-blue-500/30 text-blue-400 bg-blue-500/5 px-4 py-1 mb-4 animate-pulse">
+                        .NET 10 LTS + High Precision Audio
+                    </Badge>
+                </div>
                 <h1 className="text-4xl font-extrabold tracking-tight">AI Architecture Rules</h1>
                 <p className="text-muted-foreground text-lg">IntelligentAudio.NET Documentation & Standards</p>
-            </header>
-
+                </header>
             {/* Core Tech Stack */}
             <section className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 mt-6">
                 <Card className="bg-slate-950/40 border-slate-900 backdrop-blur-md hover:border-blue-500/20 transition-colors">

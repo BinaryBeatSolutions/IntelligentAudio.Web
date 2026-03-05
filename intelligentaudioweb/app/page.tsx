@@ -17,7 +17,6 @@ export default function LandingPage() {
                 }}
             />
 
-
             {/* Subtle blue top-down gradient */}
             <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(56,189,248,0.04),transparent)] pointer-events-none" />
         

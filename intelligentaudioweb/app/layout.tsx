@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         siteName: 'IntelligentAudio.NET',
         images: [
             {
-                url: 'https://intelligentaudio.net', // Länka till din bild
+                url: 'https://intelligentaudio.net',
                 width: 1200,
                 height: 630,
                 alt: 'IntelligentAudio.NET Architecture Preview',
@@ -33,8 +33,7 @@ export const metadata: Metadata = {
         type: 'website',
     },
     icons: {
-        icon: '/icon.png', // Sökväg relativt till 'public'-mappen eller automatisk från 'app'
-        // Du kan även lägga till apple-touch-icon här
+        icon: '/icon.png', 
         apple: '/apple-icon.png',
     },
     twitter: {
