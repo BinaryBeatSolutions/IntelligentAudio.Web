@@ -26,9 +26,9 @@ export default function Header() {
 
                 {/* NAVIGATION */}
                 <nav className="flex items-center gap-8">
-                    {/*<Link href="#features" className="text-[12px] uppercase tracking-widest text-slate-400 hover:text-blue-400 transition-colors font-medium">*/}
-                    {/*    Engine*/}
-                    {/*</Link>*/}
+                    <Link href="/system-design" className="text-[12px] uppercase tracking-widest text-slate-400 hover:text-blue-400 transition-colors font-medium">
+                        Systemdesign
+                    </Link>
                     <Link href="/architect" className="text-[12px] uppercase tracking-widest text-slate-400 hover:text-blue-400 transition-colors font-medium">
                         Architecture
                     </Link>

@@ -124,3 +124,35 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Gör pilspetsarna och linjerna lite mer High-Tech */
+.mermaid .edgePath path {
+    stroke-width: 1.5px !important;
+    filter: drop-shadow(0 0 2px rgba(59, 130, 246, 0.4));
+}
+
+/* Ge noderna en subtil border-glow */
+.mermaid .node rect, .mermaid .node polygon {
+    stroke-opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.mermaid .node:hover rect {
+    stroke-width: 3px !important;
+    filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.6));
+}
+
+/* Rundade hörn på alla noder i Mermaid */
+.mermaid .node rect,
+.mermaid .node polygon,
+.mermaid .cluster rect {
+    rx: 12px !important; /* Justera för mer/mindre rundning */
+    ry: 12px !important;
+}
+
+/* Gör subgrafernas (de stora boxarna) hörn lite mjukare */
+.mermaid .cluster rect {
+    rx: 16px !important;
+    ry: 16px !important;
+    stroke-opacity: 0.3;
+}
