@@ -74,9 +74,9 @@ export default function Architect() {
                     </Alert>
 
                     <Card className="bg-slate-950/40 border-slate-900 backdrop-blur-md hover:border-blue-500/20 transition-colors">
-                        <CardHeader><CardTitle className="text-md text-white">Architectural Excellence</CardTitle></CardHeader>
-                        <div className="p-4 text-sm text-white">
-                            <ol className="list-decimal list-inside p-2">
+                        <CardHeader><CardTitle className="text-xl text-white">Architectural Excellence</CardTitle></CardHeader>
+                        <div className="pl-6 text-sm text-white">
+                            <ol className="list-decimal list-inside mt-0">
                                 <li>No LINQ, avoid boxing, and prioritize Span&lt;T&gt; for all buffer handling. Important!</li>
                                 <li>This version represents a complete architectural rebuild, moving away from legacy Reflection-based systems to a modern,decoupled **Event-Driven Architecture**:</li>
                                 <li>Zero-Allocation Pipeline: Leveraging `Span&alt;float&gt;` and `Memory&alt;T&gt;` for real-time audio cleaning without Garbage Collector spikes.</li>
