@@ -125,7 +125,7 @@ export default function SystemDesignPage() {
                         <Card className="bg-[#0d1117]/40 border-slate-800/50 backdrop-blur">
                             <CardHeader>
                                 <div className="flex items-center gap-3">
-                                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-indigo-500/10 text-indigo-500 font-mono text-sm border border-indigo-500/20">f
+                                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-indigo-500/10 text-indigo-500 font-mono text-sm border border-indigo-500/20">
                                         3
                                     </div>
                                     <CardTitle className="text-lg text-white">AI & Domain Logic</CardTitle>
