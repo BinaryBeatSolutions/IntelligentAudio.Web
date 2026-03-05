@@ -62,11 +62,87 @@ export default function SystemDesignPage() {
             <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(56,189,248,0.04),transparent)] pointer-events-none" />
 
             <main className="animate-in fade-in slide-in-from-bottom-4 duration-1000 ease-out relative max-w-6xl mx-auto px-6 py-24">
-        <div className="max-w-6xl mx-auto p-8 space-y-8">
+              
+                <div className="max-w-6xl mx-auto p-8 space-y-8">
+                    <div className="flex justify-center opacity-50 hover:opacity-100 transition-opacity">
+                        <Badge variant="outline" className="border-blue-500/30 text-blue-400 bg-blue-500/5 px-4 animate-pulse">
+                            .NET 10 LTS + High Precision Audio
+                        </Badge>
+                    </div>
             <div className="space-y-2">
                 <h1 className="text-4xl font-bold tracking-tight">System Architecture</h1>
                 <p className="text-slate-400">Deep-dive into the IntelligentAudio.NET core engine and DSP pipeline.</p>
-            </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-12">
+
+                        {/* Phase 1: Deployment */}
+                        <Card className="bg-[#0d1117]/40 border-slate-800/50 backdrop-blur">
+                            <CardHeader>
+                                <div className="flex items-center gap-3">
+                                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-500/10 text-blue-500 font-mono text-sm border border-blue-500/20">
+                                        1
+                                    </div>
+                                    <CardTitle className="text-lg text-white">Deployment & Handshake</CardTitle>
+                                </div>
+                            </CardHeader>
+                            <CardContent className="text-sm text-slate-400 space-y-4">
+                                <p>
+                                    The system starts via Abletons <code className="text-blue-400">loadbang</code>. A TCP handshake occurs on Port <strong>Port 9005</strong> to verify the client and returns a port.
+                                </p>
+                                <div className="pt-2 border-t border-slate-800/50">
+                                    <p className="text-[10px] uppercase tracking-widest text-slate-500 mb-1">Inno Setup Logic</p>
+                                    <Badge variant="outline" className="text-[10px] border-slate-700 text-white">Auto Firewall Config</Badge>
+                                </div>
+                            </CardContent>
+                        </Card>
+
+                        {/* Phase 2: Engine */}
+                        <Card className="bg-[#0d1117]/40 border-slate-800/50 backdrop-blur">
+                            <CardHeader>
+                                <div className="flex items-center gap-3">
+                                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-500 font-mono text-sm border border-emerald-500/20">
+                                        2
+                                    </div>
+                                    <CardTitle className="text-lg text-white">High-Performance Engine</CardTitle>
+                                </div>
+                            </CardHeader>
+                            <CardContent className="text-sm text-slate-400 space-y-4">
+                                <p>
+                                    The audio is cleaned via <strong>HP-Filter(80hz)</strong> and <strong>NoiseGate</strong> before being streamed through a lock-free <code className="text-emerald-400">Bounded Channel</code>.
+                                </p>
+                                <div className="pt-2 border-t border-slate-800/50">
+                                    <p className="text-[10px] uppercase tracking-widest text-slate-500 mb-1">Memory Safety</p>
+                                    <div className="flex gap-2 text-white">
+                                        <Badge variant="outline" className="text-[10px] border-slate-700 text-white">ArrayPool&lt;T&gt;</Badge>
+                                        <Badge variant="outline" className="text-[10px] border-slate-700 text-white">Span&lt;T&gt;</Badge>
+                                    </div>
+                                </div>
+                            </CardContent>
+                        </Card>
+
+                        {/* Phase 3: Intelligence */}
+                        <Card className="bg-[#0d1117]/40 border-slate-800/50 backdrop-blur">
+                            <CardHeader>
+                                <div className="flex items-center gap-3">
+                                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-indigo-500/10 text-indigo-500 font-mono text-sm border border-indigo-500/20">f
+                                        3
+                                    </div>
+                                    <CardTitle className="text-lg text-white">AI & Domain Logic</CardTitle>
+                                </div>
+                            </CardHeader>
+                            <CardContent className="text-sm text-slate-400 space-y-4">
+                                <p>
+                                    Whisper AI maps voice intents to music theory. The logic is <strong>domain-agnostic</strong> and communicates via OSC on <strong>Port 9000</strong>.
+                                </p>
+                                <div className="pt-2 border-t border-slate-800/50">
+                                    <p className="text-[10px] uppercase tracking-widest text-slate-500 mb-1">Connectivity</p>
+                                    <Badge variant="outline" className="text-[10px] border-slate-700 text-white">UDP OSC Payload</Badge>
+                                </div>
+                            </CardContent>
+                        </Card>
+                    </div>
+
 
             {/* The Hero Diagram Card */}
             <Card className="bg-[#0d1117]/80 border-slate-800/50 backdrop-blur-sm overflow-hidden group">
@@ -124,9 +200,13 @@ export default function SystemDesignPage() {
                             <CardContent className="text-[15px] text-slate-400">
                         <strong>Inno Setup</strong> automated firewall configuration and dependency management for seamless DAW integration.
                     </CardContent>
-                </Card>
-            </div>
+                        </Card>
+            
+                        
 
+
+            </div>
+                   
                 <Alert className="bg-blue-500/10 border-blue-500/20 text-blue-400 flex">
                         
                         <Database className="h-4 w-4" />
