@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/card";
 import React from 'react';
 import { Badge } from "@/components/ui/badge";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Alert,  AlertTitle } from "@/components/ui/alert";
 import { Cpu, Zap, Database, Layout } from "lucide-react";
 
 export default function Architect() {
@@ -41,34 +41,54 @@ export default function Architect() {
                         <p className="text-xs text-muted-foreground">BuildSoft.OscCore</p>
                     </CardContent>
                 </Card>
-
-
+                <Card className="bg-slate-950/40 border-slate-900 backdrop-blur-md hover:border-blue-500/20 transition-colors">
+                    <CardHeader className="flex flex-row items-center justify-between pb-2 space-y-0">
+                        <CardTitle className="text-sm text-white font-medium">AI Engine</CardTitle>
+                        <Zap className="w-4 h-4 text-muted-foreground" />
+                    </CardHeader>
+                    <CardContent>
+                        <div className="text-2xl text-white font-bold">Speach Engine</div>
+                        <p className="text-xs text-muted-foreground">Whisper.NET</p>
+                    </CardContent>
+                    </Card>
 
                     <Card className="bg-slate-950/40 border-slate-900 backdrop-blur-md hover:border-blue-500/20 transition-colors">
                         <CardHeader className="flex flex-row items-center justify-between pb-2 space-y-0">
-                            <CardTitle className="text-sm text-white font-medium">AI Engine</CardTitle>
+                            <CardTitle className="text-sm text-white font-medium">Audio Engine</CardTitle>
                             <Zap className="w-4 h-4 text-muted-foreground" />
                         </CardHeader>
                         <CardContent>
-                            <div className="text-2xl text-white font-bold">Speach to cmd</div>
-                            <p className="text-xs text-muted-foreground">Whisper.NET</p>
+                            <div className="text-2xl text-white font-bold">Audio</div>
+                            <p className="text-xs text-muted-foreground">NAudio</p>
                         </CardContent>
                     </Card>
-
-
             </section>
 
             {/* Memory Management Strategy - ALERT STYLE */}
-                <section className="space-y-4 mt-6 bg-slate-950/40 border-slate-900 backdrop-blur-md hover:border-blue-500/20 transition-colors">
+                <section className="space-y-4 mt-4 bg-slate-950/40 border-slate-900 backdrop-blur-md hover:border-blue-500/20 transition-colors">
                         <h2 className="text-2xl font-semibold italic flex items-center gap-2">
-                        <Database className="w-6 h-6" /> Memory Management Strategy (STRICT)
-                    </h2>
+                            <Database className="w-6 h-6" /> Memory Management Strategy (STRICT)
+                        </h2>
                     <Alert variant="destructive" className="bg-slate-950/40 border-slate-900 backdrop-blur-md hover:border-blue-500/20 transition-colors">
                         <AlertTitle>Goal: Zero-Allocation in the hot path</AlertTitle>
-                        <AlertDescription>
-                            No LINQ, avoid boxing, and prioritize Span&lt;T&gt; for all buffer handling. Important!
-                        </AlertDescription>
                     </Alert>
+
+                    <Card className="bg-slate-950/40 border-slate-900 backdrop-blur-md hover:border-blue-500/20 transition-colors">
+                        <CardHeader><CardTitle className="text-md text-white">Architectural Excellence</CardTitle></CardHeader>
+                        <div className="p-4 text-sm text-white">
+                            <ol className="list-decimal list-inside p-2">
+                                <li>No LINQ, avoid boxing, and prioritize Span&lt;T&gt; for all buffer handling. Important!</li>
+                                <li>This version represents a complete architectural rebuild, moving away from legacy Reflection-based systems to a modern,decoupled **Event-Driven Architecture**:</li>
+                                <li>Zero-Allocation Pipeline: Leveraging `Span&alt;float&gt;` and `Memory&alt;T&gt;` for real-time audio cleaning without Garbage Collector spikes.</li>
+                                <li>Asynchronous Orchestration: Powered by `System.Threading.Channels` for non-blocking communication between the Microphone, AI Engine, and Network layers.</li>
+                                <li>DAW-Agnostic Design: A Factory-based driver system (`IDawClient`) that currently supports Ableton Live via OSC, (roadmap for FL Studio, Logic Pro, (VST Bridge).</li>
+                                <li>In-Memory Event Bus: A `DefaultEventAggregator` that decouples AI analysis from hardware delivery, ensuring a (No-Bug) environment.</li>
+                                <li>IntelligentAudio.NET uses a Dynamic Discovery Architecture.</li>
+                                <li>Instead of hardcoding ports, clients announce themselves via a handshake protocol.</li>
+                                <li>The server dynamically spins up dedicated UDP transmitters for each instance, ensuring perfect isolation and zero configuration for the end user.</li>
+                            </ol>
+                        </div>
+                    </Card>
 
                     <div className="grid gap-2 md:grid-cols-2">
                          <Card className="bg-slate-950/40 border-slate-900 backdrop-blur-md hover:border-blue-500/20 transition-colors">
@@ -92,16 +112,13 @@ export default function Architect() {
                                     <li>Decoupled Design: DAW-specific logic must be abstracted via interfaces.</li>
                                     <li>Pipeline-Driven: Use System.IO.Pipelines or Channels for data flow between modules.</li>
                                     <li>Event-Driven: Use high-performance events or ValueTask to minimize heap pressure.</li>
-                                    <li>Naming Convention: Do NOT use words like "Simple" in class names. Use Default[Name]Impl.cs or specific descriptive names.</li>
+                                    <li>Naming Convention: Do NOT use words like &#34; Simple&#34; in class names. Use Default[Name]Impl.cs or specific descriptive names.</li>
                                 </ol>
                             </CardContent>
                         </Card>
 
                     </div>
                 </section>
-
-
-
 
 
             {/* Project Structure */}
@@ -111,10 +128,10 @@ export default function Architect() {
                 </h2>
                 <div className="grid gap-4">
                     {[
-                            { title: "IntelligentAudio.Contracts", desc: "ZERO external dependencies. Contains interfaces, record struct, and const.", badge: "Abstractions and shared types." },
-                            { title: "IntelligentAudio.Infrastructure", desc: "Houses BuildSoft.OscCore. Implements non-allocating UDP listeners.", badge: "Technical implementation and I/O." },
-                            { title: "IntelligentAudioEngine", desc: "TWhisper.net, Span<T> logic, chord detection, and transport control.", badge: "Real-time pipeline." },
-                            { title: "IntelligentAudio.Server", desc: "Composition Root and DI setup. Dependency Injection setup, and service lifecycle management.", badge: "Host, Composition Root" },
+                        { title: "IntelligentAudio.Contracts", desc: "ZERO external dependencies. Contains interfaces, record struct, and const.", badge: "Abstractions and shared types." },
+                        { title: "IntelligentAudio.Infrastructure", desc: "Houses BuildSoft.OscCore. Implements non-allocating UDP listeners.", badge: "Technical implementation and I/O." },
+                        { title: "IntelligentAudioEngine", desc: "TWhisper.net, Span<T> logic, chord detection, and transport control.", badge: "Real-time pipeline." },
+                        { title: "IntelligentAudio.Server", desc: "Composition Root and DI setup. Dependency Injection setup, and service lifecycle management.", badge: "Host, Composition Root" },
                         { title: "IntelligentAudio.Integrations.Common", desc: "Middleware: Connect external apps layer.", badge: "No Deps" },
                         { title: "IntelligentAudio.Integrations.Ableton", desc: "Plugin: Ableton specific commands.", badge: "Plugin Library" },
                         { title: "IntelligentAudio.MusicTheory", desc: "Plugin: Musictheory lib.", badge: "Plugin Library" }
