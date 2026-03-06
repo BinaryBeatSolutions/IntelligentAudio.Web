@@ -22,6 +22,8 @@ export default function Header() {
                     <span className="font-bold text-sm tracking-tight text-white hidden sm:block">
                         IntelligentAudio<span className="text-blue-500">.NET</span>
                     </span>
+
+          
                 </Link>
 
                 {/* NAVIGATION */}
@@ -33,8 +35,14 @@ export default function Header() {
                         Architecture
                     </Link>
                     <Button asChild variant="outline" size="sm" className="border-blue-500/20 bg-blue-500/5 text-blue-400 hover:bg-blue-500 hover:text-white transition-all h-8 text-[11px] uppercase tracking-wider">
+                        <Link href="https://www.linkedin.com/in/binarybeats/" target="_blank">LinkedIn</Link>
+                    </Button>
+
+                    <Button asChild variant="outline" size="sm" className="border-blue-500/20 bg-blue-500/5 text-blue-400 hover:bg-blue-500 hover:text-white transition-all h-8 text-[11px] uppercase tracking-wider">
                         <Link href="https://github.com/BinaryBeatSolutions/IntelligentAudio.NET" target="_blank">GitHub</Link>
                     </Button>
+
+
                 </nav>
 
             </div>

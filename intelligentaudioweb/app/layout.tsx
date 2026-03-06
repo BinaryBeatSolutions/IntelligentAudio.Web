@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import Header from "@/components/header";
+import InferenceWorker from "../components/InterferenceWorker";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,18 +47,25 @@ export const metadata: Metadata = {
 
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-          >
-              <Header />
-        {children}
-      </body>
-    </html>
-  );
+    return (
+        <html lang="en">
+            <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-950`}>
+                <Header />
+
+                {/* Huvudinnehållet */}
+                {children}
+
+                {/* Global Floating AI Interface */}
+                <div className="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-4">
+                    <div className="scale-75 origin-bottom-right"> {/* Gör den lite mindre för global vy */}
+                        <InferenceWorker />
+                    </div>
+                </div>
+            </body>
+        </html>
+    );
 }
