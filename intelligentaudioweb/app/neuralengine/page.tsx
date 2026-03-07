@@ -16,7 +16,7 @@ export default function NeuralEnginePage() {
                 {/* HERO SECTION */}
                 <section className="text-center space-y-8 mb-20">
                     <Badge variant="outline" className="border-blue-500/30 text-blue-400 bg-blue-500/5 px-4 py-1 mb-4">
-                        Neural Harmonic Engine Core
+                        .NET 10 LTS + High Precision Audio
                     </Badge>
                     <h1 className="sm:text-xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-white">
                         Neural<span className="text-blue-500 text-glow">Engine</span>
