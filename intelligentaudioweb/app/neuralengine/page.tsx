@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Brain, Mic, Search, Zap, Code2, Network, Terminal } from "lucide-react"
 import Link from "next/link"
+import InferenceWorker from "../../components/InterferenceWorker"
 
 export default function NeuralEnginePage() {
     return (
@@ -133,14 +134,12 @@ export default function NeuralEnginePage() {
                         ))}
                     </div>
                 </div>
-
-                {/*<div className="mt-16 text-center">*/}
-                {/*    <Button variant="outline" className="border-slate-800 hover:border-blue-500/50 hover:bg-blue-500/5 transition-all px-8">*/}
-                {/*        <Link href="https://github.com" target="_blank" className="flex items-center gap-2">*/}
-                {/*            Explore NeuralEngine on GitHub*/}
-                {/*        </Link>*/}
-                {/*    </Button>*/}
-                {/*</div>*/}
+                {/* Global Floating AI Interface */}
+                <div className="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-4">
+                    <div className="scale-75 origin-bottom-right">  Gör den lite mindre för global vy 
+                        <InferenceWorker />
+                    </div>
+                </div>
 
             </main>
         </div>
