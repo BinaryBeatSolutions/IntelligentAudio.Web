@@ -13,45 +13,45 @@ graph TD
     classDef logic fill:#1e1b4b,stroke:#818cf8,stroke-width:2px,color:#f5f3ff;
     classDef performance fill:#1e3a8a,stroke:#3b82f6,stroke-dasharray: 5 5,color:#3b82f6;
     classDef transport fill:#450a0a,stroke:#ef4444,stroke-width:2px,color:#fef2f2;
-    classDef external fill:#000,stroke:#475569,stroke-dasharray: 5 5,color:#94a3b8;
+    classDef neural fill:#312e81,stroke:#a855f7,stroke-width:2px,color:#faf5ff;
 
-    %% 1. Deployment & Handshake
-    subgraph Phase1 [1. DEPLOYMENT & HANDSHAKE]
-        IS[Inno Setup Installer] -->|Port Config| FW[Firewall: 9000/9005]
-        AMXD[.amxd Device] -->|TCP Handshake| CM[IClientManager]
+    %% 1. Deployment & Discovery
+    subgraph Phase1 [1. DEPLOYMENT & DISCOVERY]
+        AMXD[.amxd Device] -->|Expose Properties| DS[DiscoveryService]
+        DS -->|Property Map| CM[IClientManager]
         EXE[IntelligentAudio.NET.exe] -.-> CM
     end
 
-    %% 2. The Core Pipeline (Hjärtat)
-    subgraph Phase2 [2. HIGH-PERFORMANCE ENGINE]
-        WAS[WindowsAudioSource] -->|Span T / ArrayPool| RS[Resampler 16kHz]
-        RS --> HPF[[SimpleHighPassFilter]]
+    %% 2. High-Performance Stream
+    subgraph Phase2 [2. AUDIO PROCESSING]
+        WAS[WindowsAudioSource] -->|16kHz Resampling| HPF[[SimpleHighPassFilter]]
         HPF --> NG[[NoiseGateProcessor]]
-        
-        %% Lock-Free Badge kopplad till kanalen
         NG -->|Clean Stream| BHC[Bounded Channel]
         LFC((LOCK-FREE)) -.- BHC
     end
 
-    %% 3. Inference & Logic (Hjärnan)
-    subgraph Phase3 [3. INFERENCE & ACTION]
+    %% 3. Neural Engine Core
+    subgraph Phase3 [3. NEURAL INFERENCE]
         BHC --> WHI[WhisperInferenceWorker]
-        WHI -->|Text Intent| IIH{IIntentHandler}
-        IIH -->|Module| MT[MusicTheory.ChordFactory]
-        MT --> ADC[AbletonDawClient]
+        WHI -- "Transcribed Text" --> NE[NeuralEngine]
+        ONNX[(ONNX Model)] -.->|Intent Classification| NE
+        NE -->|IIntentHandler| DS
     end
 
-    %% Execution Loop
-    ADC -->|UDP OSC Port 9000| AMXD
-    AMXD -->|MIDI| SOUND[Real-time Audio]
+    %% 4. Execution
+    subgraph Phase4 [4. EXECUTION]
+        DS -->|Command Dispatch| ADC[AbletonDawClient]
+        ADC -->|UDP OSC Port 9000| AMXD
+    end
 
     %% Apply Classes
-    class WAS,RS,WHI,EXE,BHC engine;
+    class WAS,WHI,EXE,BHC engine;
     class HPF,NG dsp;
-    class IIH,MT,ADC logic;
+    class NE,DS,ADC logic;
     class LFC performance;
     class AMXD,CM transport;
-    class ABL,SOUND external;
+    class ONNX neural;
+
 `;
 
 

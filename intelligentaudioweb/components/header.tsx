@@ -28,6 +28,10 @@ export default function Header() {
 
                 {/* NAVIGATION */}
                 <nav className="flex items-center gap-8">
+                    <Link href="/neuralengine" className="text-[12px] uppercase tracking-widest text-slate-400 hover:text-blue-400 transition-colors font-medium">
+                        Neural
+                    </Link>
+
                     <Link href="/system-design" className="text-[12px] uppercase tracking-widest text-slate-400 hover:text-blue-400 transition-colors font-medium">
                         Systemdesign
                     </Link>
@@ -41,8 +45,6 @@ export default function Header() {
                     <Button asChild variant="outline" size="sm" className="border-blue-500/20 bg-blue-500/5 text-blue-400 hover:bg-blue-500 hover:text-white transition-all h-8 text-[11px] uppercase tracking-wider">
                         <Link href="https://github.com/BinaryBeatSolutions/IntelligentAudio.NET" target="_blank">GitHub</Link>
                     </Button>
-
-
                 </nav>
 
             </div>
