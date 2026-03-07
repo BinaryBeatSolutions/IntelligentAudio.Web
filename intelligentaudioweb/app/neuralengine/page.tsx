@@ -109,6 +109,36 @@ export default function NeuralEnginePage() {
                 </div>
 
 
+                {/* THE "WHY" SECTION - LINKEDIN OPTIMIZED */}
+                <div className="p-8 mt-12 bg-slate-950/40 border border-slate-900 rounded-sm relative overflow-hidden group">
+                    <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                        <Mic className="w-32 h-32 text-blue-500" />
+                    </div>
+
+                    <h3 className="text-white font-bold mb-4 flex items-center gap-2">
+                        <Mic className="w-5 h-5 text-blue-500 fill-blue-500/20" />
+                        Neural Harmonic Engine
+                    </h3>
+                    <p className="text-slate-400 leading-relaxed mb-6 max-w-4xl">
+                        Test Neural Engine directly. Click the microphone button and see the result. 
+                        For now its only mockup data, but the call to the service is real.
+                        When the service runs locally this will also be a Live service.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                        {[".NET 10", "Ableton Live" , "Midi generation"].map(tag => (
+                            <Badge key={tag} variant="secondary" className="bg-blue-500/10 text-blue-400 border-none font-mono text-[10px] px-3">
+                                {tag}
+                            </Badge>
+                        ))}
+                    </div>
+                </div>
+                {/* Global Floating AI Interface */}
+                <div className="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-4">
+                    <div className="scale-75 origin-bottom-right">
+                        <InferenceWorker />
+                    </div>
+                </div>
+
 
                 {/* THE "WHY" SECTION - LINKEDIN OPTIMIZED */}
                 <div className="p-8 mt-12 bg-slate-950/40 border border-slate-900 rounded-sm relative overflow-hidden group">
