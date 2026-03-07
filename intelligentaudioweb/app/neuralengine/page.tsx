@@ -136,7 +136,7 @@ export default function NeuralEnginePage() {
                 </div>
                 {/* Global Floating AI Interface */}
                 <div className="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-4">
-                    <div className="scale-75 origin-bottom-right">  Gör den lite mindre för global vy 
+                    <div className="scale-75 origin-bottom-right">  
                         <InferenceWorker />
                     </div>
                 </div>
