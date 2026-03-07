@@ -22,10 +22,16 @@ graph TD
         EXE[IntelligentAudio.NET.exe] -.-> CM
     end
 
-    %% 2. High-Performance Stream
-    subgraph Phase2 [2. AUDIO PROCESSING]
-        WAS[WindowsAudioSource] -->|16kHz Resampling| HPF[[SimpleHighPassFilter]]
-        HPF --> NG[[NoiseGateProcessor]]
+    %% 2. High-Performance Stream & DSP
+    subgraph Phase2 [2. AUDIO PROCESSING & FILTERS]
+        WAS[WindowsAudioSource] -->|16kHz Resampling| FB{Filter Bank}
+
+        %% De nya filtren som options
+        FB -.-> HPF[[6db Filter]]
+        FB -.-> F12[[12dB Filter]]
+        FB -.-> F24[[24dB Filter]]
+
+        HPF & F12 & F24 --> NG[[NoiseGateProcessor]]
         NG -->|Clean Stream| BHC[Bounded Channel]
         LFC((LOCK-FREE)) -.- BHC
     end
@@ -46,11 +52,12 @@ graph TD
 
     %% Apply Classes
     class WAS,WHI,EXE,BHC engine;
-    class HPF,NG dsp;
+    class HPF,F12,F24,NG dsp;
     class NE,DS,ADC logic;
     class LFC performance;
     class AMXD,CM transport;
     class ONNX neural;
+
 
 `;
 
