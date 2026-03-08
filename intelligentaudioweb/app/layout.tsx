@@ -6,6 +6,7 @@ import "./globals.css";
 import Footer from "@/components/footer";
 import Navbar from "@/components/Navbar";
 import { Badge } from "@/components/ui/badge"
+import NeuralBottomBar from "../components/NeuralBottomBar";
 
 
 const geistSans = Geist({
@@ -68,6 +69,7 @@ export default function RootLayout({
                     {children}
                 </main>
                 <Footer />
+                <NeuralBottomBar /> 
             </body>
         </html>
     );
