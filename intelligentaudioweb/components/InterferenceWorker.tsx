@@ -10,7 +10,7 @@ export default function InferenceWorker() {
 
     return (
         <div className="flex flex-col items-center justify-center p-12 min-h-[500px] w-full">
-            {/* HUD-inspirerad rubrik (Matchar din picky style) */}
+            {/* HUD-inspirerad rubrik (Matchar picky style) */}
             <div className="mb-12 text-center">
                 <h1 className="text-slate-200 font-light tracking-[0.2em] uppercase text-sm mb-2">
                     Neural Harmonic Engine

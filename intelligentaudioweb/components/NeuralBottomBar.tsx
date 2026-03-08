@@ -14,7 +14,7 @@ export default function NeuralBottomBar() {
                 height: isExpanded ? "90vh" : "70px",
                 backgroundColor: isExpanded ? "rgba(2, 6, 23, 0.98)" : "rgba(2, 6, 23, 0.85)"
             }}
-            className="fixed bottom-0 left-0 right-0 z-50 backdrop-blur-2xl border-t border-white/5 shadow-[0_-10px_40px_rgba(0,0,0,0.5)] rounded-t-[2.5rem] overflow-hidden"
+            className="fixed bottom-0 left-0 right-0 z-50 backdrop-blur-2xl border-t border-white/5 shadow-[0_-10px_40px_rgba(0,0,0,0.5)] overflow-hidden"
         >
             {/* Clickable Header för att expandera */}
             <div

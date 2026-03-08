@@ -134,13 +134,6 @@ export default function NeuralEnginePage() {
                         ))}
                     </div>
                 </div>
-                {/* Global Floating AI Interface */}
-                <div className="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-4">
-                    <div className="scale-75 origin-bottom-right">  
-                        <InferenceWorker />
-                    </div>
-                </div>
-
                 {/* THE "WHY" SECTION - LINKEDIN OPTIMIZED */}
                 <div className="p-8 mt-12 bg-slate-950/40 border border-slate-900 rounded-sm relative overflow-hidden group">
                     <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">

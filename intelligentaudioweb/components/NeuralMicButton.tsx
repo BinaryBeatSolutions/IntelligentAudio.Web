@@ -7,6 +7,16 @@ import { MicButtonProps } from "@/contracts/MicButtonProps";
 export const NeuralMicButton = ({ isRecording, onClick }: MicButtonProps) => {
     // Här kan du senare skicka in en prop 'isGateOpen' från din signal-analys
     const isGateOpen = isRecording; // Demo-logik: lyser när vi spelar in
+    const handleMicClick = () => {
+        // 1. Trigga en kort, distinkt vibration (50ms)
+        // Vi kollar om webbläsaren stöder det (mest Android/PWA)
+        if (typeof window !== "undefined" && window.navigator.vibrate) {
+            window.navigator.vibrate(60); // En skön "klick"-känsla
+        }
+
+        // 2. Kör din befintliga logik
+        onClick();
+    };
 
     return (
         <div className="flex flex-col items-center gap-6">
@@ -46,7 +56,7 @@ export const NeuralMicButton = ({ isRecording, onClick }: MicButtonProps) => {
                 </AnimatePresence>
 
                 <button
-                    onClick={onClick}
+                    onClick={handleMicClick}
                     className={cn(
                         "relative z-10 h-28 w-28 rounded-full border transition-all duration-700 flex items-center justify-center overflow-hidden cursor-pointer",
                         "bg-slate-950/60 backdrop-blur-xl",
