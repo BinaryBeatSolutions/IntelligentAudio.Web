@@ -20,14 +20,11 @@ export default function LandingPage() {
             {/* Subtle blue top-down gradient */}
             <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(56,189,248,0.04),transparent)] pointer-events-none" />
         
-            <main className="animate-in fade-in slide-in-from-bottom-4 duration-1000 ease-out relative max-w-6xl mx-auto px-6 py-24">
+            <main className="animate-in fade-in slide-in-from-bottom-4 duration-1000 ease-out relative max-w-6xl mx-auto px-6 py-12">
                 
                 {/* HERO SECTION */}
                 <section className="text-center space-y-8 mb-32">
-                    <Badge variant="outline" className="border-blue-500/30 text-blue-400 bg-blue-500/5 px-4 py-1 mb-4 animate-pulse">
-                        .NET 10 LTS + High Precision Audio
-                    </Badge>
-                    <h1 className="sm:text-xl md:text-6xl lg:text-8xl font-bold tracking-tighter text-white">
+                   <h1 className="text-5xl lg:text-8xl font-bold tracking-tighter text-white">
                         IntelligentAudio<span className="text-blue-500">.NET</span>
                     </h1>
                     <p className="sm:text-md md:text-2xl text-slate-400 max-w-3xl mx-auto font-light leading-relaxed">

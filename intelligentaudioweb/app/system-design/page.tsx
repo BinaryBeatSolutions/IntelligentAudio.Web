@@ -68,16 +68,11 @@ export default function SystemDesignPage() {
         <div className="min-h-screen bg-[#02040a] text-slate-50 font-sans selection:bg-blue-500/30">
             <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(56,189,248,0.04),transparent)] pointer-events-none" />
 
-            <main className="animate-in fade-in slide-in-from-bottom-4 duration-1000 ease-out relative max-w-6xl mx-auto px-6 py-24">
+            <main className="animate-in fade-in slide-in-from-bottom-4 duration-1000 ease-out relative max-w-6xl mx-auto px-6 ">
               
                 <div className="max-w-6xl mx-auto p-8 space-y-8">
-                    <div className="flex justify-center opacity-50 hover:opacity-100 transition-opacity">
-                        <Badge variant="outline" className="border-blue-500/30 text-blue-400 bg-blue-500/5 px-4 animate-pulse">
-                            .NET 10 LTS + High Precision Audio
-                        </Badge>
-                    </div>
             <div className="space-y-2">
-                <h1 className="text-4xl font-bold tracking-tight">System Architecture</h1>
+                        <h1 className="text-4xl font-bold tracking-tight">System <span className="text-blue-500">Architecture</span></h1>
                 <p className="text-slate-400">Deep-dive into the IntelligentAudio.NET core engine and DSP pipeline.</p>
                     </div>
 

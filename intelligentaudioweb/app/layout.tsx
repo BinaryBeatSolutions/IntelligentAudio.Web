@@ -2,8 +2,11 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-import Header from "@/components/header";
-import InferenceWorker from "../components/InterferenceWorker";
+/*import Header from "@/components/header";*/
+import Footer from "@/components/footer";
+import Navbar from "@/components/Navbar";
+import { Badge } from "@/components/ui/badge"
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -53,18 +56,18 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-950`}>
-                <Header />
-
-                {/* Huvudinnehållet */}
-                {children}
-
-                {/* Global Floating AI Interface */}
-                {/*<div className="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-4">*/}
-                {/*    <div className="scale-75 origin-bottom-right"> */}{/* Gör den lite mindre för global vy */}
-                {/*        <InferenceWorker />*/}
-                {/*    </div>*/}
-                {/*</div>*/}
+            <body className="bg-[#02040a] text-white min-h-screen flex flex-col font-sans">
+                <Navbar />
+                <main className="flex-1 container mx-auto px-4 pt-8">
+                    {/* Global Badge för alla sidor */}
+                    <div className="flex justify-center ">
+                        <Badge variant="outline" className="border-blue-500/30 text-blue-400 bg-blue-500/5 px-4 py-1 mb-8 animate-pulse font-mono text-[10px] tracking-widest">
+                            .NET 10 LTS + HIGH PRECISION AUDIO
+                        </Badge>
+                    </div>
+                    {children}
+                </main>
+                <Footer />
             </body>
         </html>
     );
