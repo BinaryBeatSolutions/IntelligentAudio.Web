@@ -48,7 +48,7 @@ export const NeuralMicButton = ({ isRecording, onClick }: MicButtonProps) => {
                 <button
                     onClick={onClick}
                     className={cn(
-                        "relative z-10 h-28 w-28 rounded-full border transition-all duration-700 flex items-center justify-center overflow-hidden",
+                        "relative z-10 h-28 w-28 rounded-full border transition-all duration-700 flex items-center justify-center overflow-hidden cursor-pointer",
                         "bg-slate-950/60 backdrop-blur-xl",
                         isRecording
                             ? "border-red-500/50 shadow-[0_0_40px_rgba(239,68,68,0.15)] scale-105"

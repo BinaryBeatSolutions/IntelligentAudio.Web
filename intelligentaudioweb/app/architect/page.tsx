@@ -16,7 +16,7 @@ export default function Architect() {
             <main className="animate-in fade-in slide-in-from-bottom-4 duration-1000 ease-out relative max-w-6xl mx-auto px-6 py-2">
 
             <header className="space-y-4">
-                    <h1 className="text-4xl font-extrabold tracking-tight">AI <span className="text-blue-500">Architecture</span> Rules</h1>
+                    <h1 className="text-4xl lg:text-7xl font-extrabold tracking-tight">AI <span className="text-blue-500">Architecture</span> Rules</h1>
                 <p className="text-muted-foreground text-lg">IntelligentAudio.NET Documentation & Standards</p>
                 </header>
             {/* Core Tech Stack */}

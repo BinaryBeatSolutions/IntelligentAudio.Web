@@ -72,7 +72,7 @@ export default function SystemDesignPage() {
               
                 <div className="max-w-6xl mx-auto p-8 space-y-8">
             <div className="space-y-2">
-                        <h1 className="text-4xl font-bold tracking-tight">System <span className="text-blue-500">Architecture</span></h1>
+                        <h1 className="text-4xl lg:text-7xl font-bold tracking-tight">System <span className="text-blue-500">Architecture</span></h1>
                 <p className="text-slate-400">Deep-dive into the IntelligentAudio.NET core engine and DSP pipeline.</p>
                     </div>
 
