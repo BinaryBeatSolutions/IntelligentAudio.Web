@@ -135,7 +135,7 @@ export default function SystemDesignPage() {
                             </CardHeader>
                             <CardContent className="text-sm text-slate-400 space-y-4">
                                 <p>
-                                    Whisper AI maps voice intents to music theory. The logic is <strong>domain-agnostic</strong> and communicates via OSC on <strong>Port 9000</strong>.
+                                    Whisper AI maps voice intents to music theory to ONNX. The logic is <strong>domain-agnostic</strong> and communicates via OSC on <strong>Port 9000</strong>.
                                 </p>
                                 <div className="pt-2 border-t border-slate-800/50">
                                     <p className="text-[10px] uppercase tracking-widest text-slate-500 mb-1">Connectivity</p>

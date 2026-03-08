@@ -3,7 +3,7 @@ import { Terminal } from "lucide-react"
 
 export default function Footer() {
     return (
-        <footer className="border-t border-white/5 bg-[#02040a] pt-16 pb-8 font-mono">
+        <footer className="border-t border-white/5 bg-[#02040a] pt-24 pb-8 font-mono">
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
 
@@ -26,11 +26,21 @@ export default function Footer() {
                         <ul className="text-[11px] space-y-2.5">
                             <li className="flex items-center gap-2 font-bold text-blue-400 italic">
                                 <div className="h-1 w-1 bg-blue-500 rounded-full animate-pulse" />
-                                Neural Engine (Whisper)
+                                Neural Engine (ONNX &amp; Whisper)
                             </li>
-                            <li className="text-slate-200">Infrastructure (UDP/OSC)</li>
-                            <li className="text-slate-200">Contracts (Agnostic)</li>
-                            <li className="text-slate-200">Lock-Free Channels</li>
+
+                            <li className="flex items-center gap-2 font-bold text-blue-400 italic">
+                                <div className="h-1 w-1 bg-blue-500 rounded-full animate-pulse" />
+                                Infrastructure (UDP/OSC)
+                            </li>
+                            <li className="flex items-center gap-2 font-bold text-blue-400 italic">
+                                <div className="h-1 w-1 bg-blue-500 rounded-full animate-pulse" />
+                                Contracts (Agnostic)
+                            </li>
+                            <li className="flex items-center gap-2 font-bold text-blue-400 italic">
+                                <div className="h-1 w-1 bg-blue-500 rounded-full animate-pulse" />
+                                Lock-Free Channels
+                            </li>
                         </ul>
                     </div>
 
