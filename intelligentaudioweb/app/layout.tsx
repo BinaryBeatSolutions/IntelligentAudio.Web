@@ -48,16 +48,8 @@ export const metadata: Metadata = {
         description: 'Zero-copy audio processing for .NET 10.',
         images: ['https://intelligentaudio.net'],
     },
+    viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0",
 };
-
-export const viewport: Viewport = {
-    themeColor: "#020617",
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
-};
-
 
 
 export default function RootLayout({
