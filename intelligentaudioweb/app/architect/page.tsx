@@ -48,7 +48,7 @@ export default function Architect() {
                     </CardHeader>
                     <CardContent>
                         <div className="text-2xl text-white font-bold">Speach Engine</div>
-                        <p className="text-xs text-muted-foreground">Whisper.NET</p>
+                        <p className="text-xs text-muted-foreground">Whisper.NET, ONNX</p>
                     </CardContent>
                     </Card>
 

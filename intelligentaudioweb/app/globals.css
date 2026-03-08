@@ -125,6 +125,13 @@
   }
 }
 
+body {
+    /* Förhindrar "pull-to-refresh" som kan störa din drag-funktionalitet */
+    overscroll-behavior-y: contain;
+    /* Gör att appen tar upp hela ytan under statusbaren på iPhone */
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
 /* Gör pilspetsarna och linjerna lite mer High-Tech */
 .mermaid .edgePath path {
     stroke-width: 1.5px !important;

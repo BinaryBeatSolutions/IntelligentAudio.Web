@@ -48,7 +48,7 @@ export default function Navbar() {
                             IntelligentAudio<span className="text-blue-500">.NET</span>
                         </div>
                         <span className="text-[8px] font-mono text-blue-500 tracking-[0.2em] leading-none mt-1 uppercase">
-                            Neural Harmonic Engine
+                            Neural Harmonic Network
                         </span>
                     </div>
                 </div>
@@ -80,7 +80,7 @@ export default function Navbar() {
                                     </Link>
                                 ))}
                                 <hr className="border-white/5" />
-                                <div className="flex flex-col gap-3">
+                                <div className="flex flex-col gap-3 md:hidden">
                                     <Button variant="outline" className="justify-start gap-2 bg-[#02040a] border-blue-500/30 text-blue-500 cursor-pointer">
                                         <Linkedin className="h-4 w-4" href="https://www.linkedin.com/in/binarybeats/" target="_blank" /> Linkedin (Author)
                                     </Button>

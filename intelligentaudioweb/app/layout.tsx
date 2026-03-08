@@ -20,6 +20,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  manifest: "/manifest.json",
   title: "IntelligentAudio.NET",
     description: "IntelligentAudio.NET", openGraph: {
         title: 'IntelligentAudio.NET',
@@ -48,6 +49,15 @@ export const metadata: Metadata = {
         images: ['https://intelligentaudio.net'],
     },
 };
+
+export const viewport: Viewport = {
+    themeColor: "#020617",
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+};
+
 
 
 export default function RootLayout({
