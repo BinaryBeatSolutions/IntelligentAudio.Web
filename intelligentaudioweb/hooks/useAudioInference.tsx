@@ -86,7 +86,7 @@ export const useAudioInference = () => {
             // Automatisk stopp efter 3 sekunder
             setTimeout(() => {
                 stopInference();
-            }, 3000);
+            }, 1000);
 
         } catch (err) {
             console.error("Microphone access denied", err);

@@ -1,19 +1,17 @@
-// components/navbar.tsx
 "use client"
 
 import Link from "next/link"
-import { Menu, Github, Linkedin } from "lucide-react"
+import { Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
 import { Activity } from "lucide-react"
 import { motion } from "framer-motion"
 
-
-interface TargetLink {
-    target: string;
-    name: string;
-    href: string;
-}
+//interface TargetLink {
+//    target: string;
+//    name: string;
+//    href: string;
+//}
 
 /**
  * Prepare for Content management
@@ -75,17 +73,17 @@ export default function Navbar() {
                             <SheetTitle className="text-white mb-8 border-b border-white/5 pb-4">MENU</SheetTitle>
                             <div className="flex flex-col gap-6">
                                 {navLinks.map((link) => (
-                                    <Link key={link.name} href={link.href} className="text-sm font-bold  hover:text-blue-500">
+                                    <Link key={link.name} href={link.href} target={ link.target } className="text-sm font-bold  hover:text-blue-500">
                                         {link.name}
                                     </Link>
                                 ))}
                                 <hr className="border-white/5" />
                                 <div className="flex flex-col gap-3 md:hidden">
                                     <Button variant="outline" className="justify-start gap-2 bg-[#02040a] border-blue-500/30 text-blue-500 cursor-pointer">
-                                        <Linkedin className="h-4 w-4" href="https://www.linkedin.com/in/binarybeats/" target="_blank" /> Linkedin (Author)
+                                        <Link className="h-4 w-4" href="https://www.linkedin.com/in/binarybeats/" target="_blank"> Linkedin (Author) </Link>
                                     </Button>
                                     <Button variant="outline" className="justify-start gap-2 bg-[#02040a] border-blue-500/30 text-blue-500  cursor-pointer">
-                                        <Github className="h-4 w-4" href="https://github.com/BinaryBeatSolutions/IntelligentAudio.NET" target="_blank"/> Github
+                                        <Link className="h-4 w-4" href="https://github.com/BinaryBeatSolutions/IntelligentAudio.NET" target="_blank"> Github </Link>
                                     </Button>
                                 </div>
                             </div>

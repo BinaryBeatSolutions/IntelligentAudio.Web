@@ -3,13 +3,14 @@ import React from 'react';
 import { NeuralMicButton } from "@/components/NeuralMicButton";
 import { useAudioInference } from "@/hooks/useAudioInference";
 import { MidiDisplay } from "@/components/MidiDisplay";
-import AIBadge from "@/components/ui/ai-badge"
 export default function InferenceWorker() {
   
-    const { isRecording, isProcessing, isOffline, startInference, result } = useAudioInference();
+    const { isRecording, isOffline, startInference, result } = useAudioInference();
+
     if (window.navigator.vibrate) {
         window.navigator.vibrate([30, 50, 30]); // Två korta stötar
     }
+
     return (
         <div className="flex flex-col items-center justify-center p-12 min-h-[500px] w-full">
             {/* HUD-inspirerad rubrik (Matchar picky style) */}
@@ -19,8 +20,6 @@ export default function InferenceWorker() {
                 </h1>
                 <div className="h-px w-24 bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent mx-auto" />
             </div>
-
-
 
             {/* KNAPPEN! */}
             <NeuralMicButton isOffline={ isOffline }
@@ -35,8 +34,6 @@ export default function InferenceWorker() {
                     midiNotes={result.notes}
                 />
             )}
-
-
 
             {/* Standby-text om vi inte gör något */}
             {!result && !isRecording && (
