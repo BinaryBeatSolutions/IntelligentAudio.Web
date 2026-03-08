@@ -24,7 +24,7 @@ export default function LandingPage() {
                 
                 {/* HERO SECTION */}
                 <section className="text-center space-y-8 mb-32">
-                   <h1 className="text-5xl lg:text-8xl font-bold tracking-tighter text-white">
+                   <h1 className="text-4xl lg:text-8xl font-bold tracking-tighter text-white">
                         IntelligentAudio<span className="text-blue-500">.NET</span>
                     </h1>
                     <p className="sm:text-md md:text-2xl text-slate-400 max-w-3xl mx-auto font-light leading-relaxed">
@@ -89,11 +89,13 @@ export default function LandingPage() {
                     <div className="flex flex-wrap justify-center gap-12 opacity-30 grayscale hover:opacity-60 transition-opacity">
                         <span className="text-xs font-black text-white italic">.NET 10 LTS</span>
                         <span className="text-xs font-black text-white italic">C# 14 / Span&lt;T&gt;</span>
-                        <span className="text-xs font-black text-white italic">Next.js 15</span>
                         <span className="text-xs font-black text-white italic">Whisper.NET</span>
+                        <span className="text-xs font-black text-white italic">ONNX</span>
                         <span className="text-xs font-black text-white italic">BuildSoft.OscCore</span>
-                        <span className="text-xs font-black text-white italic">NextJs - Tailwind v4 -ShadUi</span>
-                        <span className="text-xs font-black text-white italic">CloudFlare DNS</span>
+                        <span className="text-xs font-black text-white italic">Next.js 15</span>
+                        <span className="text-xs font-black text-white italic">Tailwind v4 -ShadUi</span>
+                        <span className="text-xs font-black text-white italic">CloudFlare</span>
+                        <span className="text-xs font-black text-white italic">Mermaid</span>
                     </div>
                 </footer>
 

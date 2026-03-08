@@ -8,15 +8,24 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/s
 import { Activity } from "lucide-react"
 import { motion } from "framer-motion"
 
+
+interface TargetLink {
+    target: string;
+    name: string;
+    href: string;
+}
+
 /**
  * Prepare for Content management
  * @returns
  */
 export default function Navbar() {
     const navLinks = [
-        { name: "Neural engine", href: "/neuralengine"},
-        { name: "System design", href: "/system-design" },
-        { name: "Architecture", href: "/architect" },
+        { name: "Neural engine", href: "/neuralengine", target:"_self"},
+        { name: "System design", href: "/system-design", target: "_self" },
+        { name: "Architecture", href: "/architect", target: "_self" },
+        { name: "LinkedIn", href: "https://www.linkedin.com/in/binarybeats/", target: "_blank" },
+        { name: "Gihub", href: "https://github.com/BinaryBeatSolutions/IntelligentAudio.NET", target: "_blank" },
     ]
 
     return (
@@ -48,18 +57,10 @@ export default function Navbar() {
                 {/* DESKTOP NAV */}
                 <div className="hidden md:flex items-center gap-6">
                     {navLinks.map((link) => (
-                        <Link key={link.name} href={link.href} className="text-[11px] font-bold  text-muted-foreground hover:text-white transition-colors uppercase text-[10px] ">
+                        <Link key={link.name} href={link.href} target={ link.target} className="text-[11px] font-bold  text-muted-foreground hover:text-white transition-colors uppercase text-[10px] ">
                             {link.name}
                         </Link>
                     ))}
-                    <div className="flex items-center gap-2 ml-4">
-                        <Button variant="outline" size="sm" className="h-8 border-blue-500/30 bg-blue-500/5 text-blue-500 hover:bg-blue-500 hover:text-white uppercase text-[10px] font-bold px-4">
-                            Linkedin
-                        </Button>
-                        <Button variant="outline" size="sm" className="h-8 border-blue-500/30 bg-blue-500/5 text-blue-500 hover:bg-blue-500 hover:text-white uppercase text-[10px] font-bold px-4">
-                            Github
-                        </Button>
-                    </div>
                 </div>
 
                 {/* MOBILE NAV (Sheet) */}
