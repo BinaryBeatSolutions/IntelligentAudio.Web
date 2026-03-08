@@ -7,7 +7,9 @@ import { MidiDisplay } from "@/components/MidiDisplay";
 export default function InferenceWorker() {
     // Hooken hanterar allt "under huven"
     const { isRecording, startInference, result } = useAudioInference();
-
+    if (window.navigator.vibrate) {
+        window.navigator.vibrate([30, 50, 30]); // Två korta stötar
+    }
     return (
         <div className="flex flex-col items-center justify-center p-12 min-h-[500px] w-full">
             {/* HUD-inspirerad rubrik (Matchar picky style) */}
