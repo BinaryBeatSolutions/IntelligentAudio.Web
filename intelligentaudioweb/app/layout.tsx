@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -19,10 +19,23 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+
+
+// 1. Bryt ut viewport helt (Vercel kräver detta nu)
+export const viewport: Viewport = {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+    themeColor: "#020617",
+};
+
+// 2. Renodlad metadata utan viewport-strängen
 export const metadata: Metadata = {
-  manifest: "/manifest.json",
-  title: "IntelligentAudio.NET",
-    description: "IntelligentAudio.NET", openGraph: {
+    manifest: "/manifest.json",
+    title: "IntelligentAudio.NET",
+    description: "IntelligentAudio.NET",
+    openGraph: {
         title: 'IntelligentAudio.NET',
         description: 'Ultra-low latency audio middleware for the AI era.',
         url: 'https://intelligentaudio.net',
@@ -39,7 +52,7 @@ export const metadata: Metadata = {
         type: 'website',
     },
     icons: {
-        icon: '/icon.png', 
+        icon: '/icon.png',
         apple: '/apple-icon.png',
     },
     twitter: {
@@ -48,8 +61,8 @@ export const metadata: Metadata = {
         description: 'Zero-copy audio processing for .NET 10.',
         images: ['https://intelligentaudio.net'],
     },
-    viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0",
 };
+
 
 
 export default function RootLayout({
