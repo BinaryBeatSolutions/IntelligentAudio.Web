@@ -3,11 +3,10 @@ import React from 'react';
 import { NeuralMicButton } from "@/components/NeuralMicButton";
 import { useAudioInference } from "@/hooks/useAudioInference";
 import { MidiDisplay } from "@/components/MidiDisplay";
-import { BrainIcon } from './BrainIcon';
-
+import AIBadge from "@/components/ui/ai-badge"
 export default function InferenceWorker() {
-    // Hooken hanterar allt "under huven"
-    const { isRecording, isProcessing, startInference, result } = useAudioInference();
+  
+    const { isRecording, isProcessing, isOffline, startInference, result } = useAudioInference();
     if (window.navigator.vibrate) {
         window.navigator.vibrate([30, 50, 30]); // Två korta stötar
     }
@@ -22,13 +21,9 @@ export default function InferenceWorker() {
             </div>
 
 
-            <div className={isProcessing ? "animate-pulse text-blue-400" : "text-slate-500"}>
-                <BrainIcon isProcessing={isProcessing} />
-            </div>
-
 
             {/* KNAPPEN! */}
-            <NeuralMicButton
+            <NeuralMicButton isOffline={ isOffline }
                 isRecording={isRecording}
                 onClick={startInference}
             />

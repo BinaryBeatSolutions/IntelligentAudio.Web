@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 interface MidiNote {
     note: string | number;
@@ -16,9 +16,40 @@ export const useAudioInference = () => {
     const [isRecording, setIsRecording] = useState<boolean>(false);
     const [isProcessing, setIsProcessing] = useState<boolean>(false);
     const [result, setResult] = useState<MidiInferenceResponse | null>(null);
+    const [isOffline, setIsOffline] = useState<boolean>(false);
 
     const mediaRecorderRef = useRef<MediaRecorder | null>(null);
     const streamRef = useRef<MediaStream | null>(null);
+
+    const checkConnection = async () => {
+        try {
+            // Vi gör en lättvikts-ping (t.ex. en HEAD-request eller en specifik /health endpoint)
+            const response = await fetch('https://api.intelligentaudio.net', {
+                method: 'GET',
+                signal: AbortSignal.timeout(3000) // Vänta max 3 sek
+            });
+
+            if (response.ok) {
+                setIsOffline(false);
+            } else {
+                setIsOffline(true);
+            }
+        } catch {
+            // Nätverket är nere eller DNS-fel
+            setIsOffline(true);
+        }
+    };
+
+    useEffect(() => {
+        // Kolla direkt vid start
+        checkConnection();
+
+        // Kolla var 30:e sekund (eller oftare om du vill ha mer "realtid")
+        const interval = setInterval(checkConnection, 30000);
+
+        return () => clearInterval(interval);
+    }, []);
+
 
     const startInference = async () => {
         if (isRecording || isProcessing) return;
@@ -88,5 +119,5 @@ export const useAudioInference = () => {
         }
     };
 
-    return { isRecording, isProcessing, startInference, result };
+    return { isRecording, isProcessing, isOffline, startInference, result };
 };

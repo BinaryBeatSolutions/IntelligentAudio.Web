@@ -55,6 +55,13 @@ export const MidiDisplay = ({ chordName, midiNotes }: MidiDisplayProps) => {
                     </motion.h2>
                 </div>
 
+                <motion.div
+                    initial={{ top: "-100%" }}
+                    animate={{ top: "200%" }}
+                    transition={{ duration: 0.6, ease: "easeInOut" }}
+                    className="absolute left-0 right-0 h-[2px] bg-cyan-500/50 shadow-[0_0_15px_#22d3ee] z-20 pointer-events-none"
+                />
+
                 {/* MIDI NOTES GRID - Med Stagger-effekt */}
                 <div className="grid grid-cols-3 gap-4">
                     {midiNotes?.map((item: any, i) => (

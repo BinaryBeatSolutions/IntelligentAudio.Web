@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 
-
-
 export default function AIBadge() {
     return (
         <Badge variant="outline" className="relative border-blue-500/30 text-blue-400 bg-blue-500/5 px-4 py-1 mb-8 font-mono text-[10px] overflow-hidden">

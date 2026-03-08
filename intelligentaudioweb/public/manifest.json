@@ -1,6 +1,6 @@
 {
     "name": "Intelligent Audio Neural Engine",
-    "short_name": "IntelligentAudio",
+    "short_name": "IANET",
     "description": "Real-time AI Harmonic Inference Engine",
     "start_url": "/",
     "display": "standalone",
