@@ -90,7 +90,7 @@ export const NeuralMicButton = ({ isRecording, isOffline, onClick }: MicButtonPr
                                     exit={{ opacity: 0 }}
                                 >
                                     <motion.div animate={isRecording ? { y: [0, -2, 0] } : {}} transition={{ duration: 1, repeat: Infinity }}>
-                                        <Mic className={cn("h-10 w-10 transition-colors duration-700", isRecording ? "text-red-500" : "text-slate-400")} />
+                                        <Mic className={cn("h-10 w-10 transition-colors duration-400", isRecording ? "text-red-500" : "text-slate-400")} />
                                     </motion.div>
                                 </motion.div>
                             )}
