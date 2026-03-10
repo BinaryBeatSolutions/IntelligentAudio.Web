@@ -7,57 +7,72 @@ import MermaidWrapper from "@/components/MermaidWrapper";
 
 const chartCode = `
 graph TD
-    %% Custom Styles för din Next.js Dark Mode
+    %% --- CUSTOM STYLES (Dark Mode Optimized) ---
     classDef engine fill:#0f172a,stroke:#3b82f6,stroke-width:2px,color:#f8fafc;
     classDef dsp fill:#022c22,stroke:#10b981,stroke-width:2px,color:#ecfdf5;
     classDef logic fill:#1e1b4b,stroke:#818cf8,stroke-width:2px,color:#f5f3ff;
     classDef performance fill:#1e3a8a,stroke:#3b82f6,stroke-dasharray: 5 5,color:#3b82f6;
     classDef transport fill:#450a0a,stroke:#ef4444,stroke-width:2px,color:#fef2f2;
     classDef neural fill:#312e81,stroke:#a855f7,stroke-width:2px,color:#faf5ff;
+    classDef nexus fill:#2563eb,stroke:#fff,stroke-width:2px,color:#fff;
+    classDef cloud fill:#000,stroke:#2563eb,stroke-width:1px,color:#2563eb;
 
-    %% 1. Deployment & Discovery
+    %% --- 1. CLOUD LAYER ---
+    subgraph Phase0 [0. CLOUD INFRASTRUCTURE]
+        GC[Global Command Registry]
+        VA[Vercel Analytics]
+    end
+
+    %% --- 2. DEPLOYMENT & DISCOVERY ---
     subgraph Phase1 [1. DEPLOYMENT & DISCOVERY]
         AMXD[.amxd Device] -->|Expose Properties| DS[DiscoveryService]
         DS -->|Property Map| CM[IClientManager]
         EXE[IntelligentAudio.NET.exe] -.-> CM
     end
 
-    %% 2. High-Performance Stream & DSP
-    subgraph Phase2 [2. AUDIO PROCESSING & FILTERS]
+    %% --- 3. AUDIO & DSP ---
+    subgraph Phase2 [2. AUDIO PROCESSING]
         WAS[WindowsAudioSource] -->|16kHz Resampling| FB{Filter Bank}
-
-        %% De nya filtren som options
         FB -.-> HPF[[6db Filter]]
         FB -.-> F12[[12dB Filter]]
         FB -.-> F24[[24dB Filter]]
-
         HPF & F12 & F24 --> NG[[NoiseGateProcessor]]
         NG -->|Clean Stream| BHC[Bounded Channel]
-        LFC((LOCK-FREE)) -.- BHC
     end
 
-    %% 3. Neural Engine Core
-    subgraph Phase3 [3. NEURAL INFERENCE]
+    %% --- 4. NEURAL & NEXUS CORE (The Hub) ---
+    subgraph Phase3 [3. NEURAL & NEXUS HUB]
         BHC --> WHI[WhisperInferenceWorker]
-        WHI -- "Transcribed Text" --> NE[NeuralEngine]
-        ONNX[(ONNX Model)] -.->|Intent Classification| NE
-        NE -->|IIntentHandler| DS
+        WHI -- "Transcribed Text" --> NIE[Neural Intent Engine]
+        ONNX[(ONNX Model)] -.->|Intent Classification| NIE
+        
+        %% NEXUS AS THE CENTRAL REGISTRY
+        NIE -- "Binary Intent" --> NX[(NEXUS Shared Memory)]
+        GC -- "HTTP/3 QUIC Sync" --> NX
+        NX -- "Pointer Access" --> NHE[Neural Harmonic Engine]
     end
 
-    %% 4. Execution
-    subgraph Phase4 [4. EXECUTION]
-        DS -->|Command Dispatch| ADC[AbletonDawClient]
+    %% --- 5. OBSERVABILITY ---
+    subgraph Phase5 [4. OBSERVABILITY]
+        NX -. "Zero-Lock Read" .-> DB[Nexus Dashboard]
+        DB -- "Usage Data" --> VA
+    end
+
+    %% --- 6. EXECUTION ---
+    subgraph Phase4 [5. DAW EXECUTION]
+        NHE -->|IIntentHandler| DS
+        DS -->|Command Dispatch| ADC[Client]
         ADC -->|UDP OSC Port 9000| AMXD
     end
 
     %% Apply Classes
-    class WAS,WHI,EXE,BHC engine;
+    class WAS,WHI,EXE,BHC,NHE engine;
     class HPF,F12,F24,NG dsp;
-    class NE,DS,ADC logic;
-    class LFC performance;
+    class NIE,DS,ADC,DB logic;
     class AMXD,CM transport;
     class ONNX neural;
-
+    class NX nexus;
+    class GC,VA cloud;
 
 `;
 
