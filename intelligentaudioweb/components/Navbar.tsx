@@ -82,7 +82,7 @@ export default function Navbar() {
                                 <hr className="border-white/5" />
                                 <div className="flex flex-col gap-3 md:hidden">
                                     <Button variant="outline" className="justify-start gap-2 bg-[#02040a] border-blue-500/30 text-blue-500 cursor-pointer">
-                                        <Link className="h-4 w-4" href="https://www.linkedin.com/in/binarybeats/" target="_blank"> Linkedin (Author) </Link>
+                                        <Link className="h-4 w-4" href="mailto:post@intelligentaudio.net"> post@intelligentaudio.net </Link>
                                     </Button>
                                     <Button variant="outline" className="justify-start gap-2 bg-[#02040a] border-blue-500/30 text-blue-500  cursor-pointer">
                                         <Link className="h-4 w-4" href="https://github.com/BinaryBeatSolutions/IntelligentAudio.NET" target="_blank"> Github </Link>
