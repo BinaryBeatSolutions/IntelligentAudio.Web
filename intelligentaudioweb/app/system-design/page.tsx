@@ -59,7 +59,7 @@ graph TD
     end
 
     %% --- 6. EXECUTION ---
-    subgraph Phase4 [5. DAW EXECUTION]
+    subgraph Phase4 [5. CLIENT EXECUTION]
         NHE -->|IIntentHandler| DS
         DS -->|Command Dispatch| ADC[Client]
         ADC -->|UDP OSC Port 9000| AMXD
