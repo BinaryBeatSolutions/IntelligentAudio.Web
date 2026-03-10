@@ -19,6 +19,8 @@ import { motion } from "framer-motion"
  */
 export default function Navbar() {
     const navLinks = [
+        { name: "Nexus", href: "/nexus", target: "_self" },
+        { name: "Dashboard", href: "/nexus-telemetry", target: "_self" },
         { name: "Neural engine", href: "/neuralengine", target:"_self"},
         { name: "System design", href: "/system-design", target: "_self" },
         { name: "Architecture", href: "/architect", target: "_self" },

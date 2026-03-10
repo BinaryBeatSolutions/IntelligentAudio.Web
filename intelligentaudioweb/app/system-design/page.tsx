@@ -204,9 +204,6 @@ export default function SystemDesignPage() {
                     </CardContent>
                         </Card>
             
-                        
-
-
             </div>
                    
                 <Alert className="bg-blue-500/10 border-blue-500/20 text-blue-400 flex">

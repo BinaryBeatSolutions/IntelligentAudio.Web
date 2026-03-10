@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Brain, Mic, Search, Zap, Code2, Network, Terminal } from "lucide-react"
+import { Brain, Mic, Search, Zap, Code2, Network, Terminal, Cpu, Layers } from "lucide-react"
 import Link from "next/link"
 import InferenceWorker from "../../components/InterferenceWorker"
 
@@ -157,6 +157,9 @@ export default function NeuralEnginePage() {
                         ))}
                     </div>
                 </div>
+
+
+
              </main>
         </div>
     )
