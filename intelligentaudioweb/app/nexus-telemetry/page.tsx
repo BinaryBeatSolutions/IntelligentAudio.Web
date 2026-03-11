@@ -86,6 +86,18 @@ export default function NexusTelemetryPage() {
                     </div>
                 </section>
 
+                <div className="flex flex-col items-center justify-center py-20 border-t border-slate-900/50">
+                    <Link href="https://telemetry.intelligentaudio.net" target="_blank">
+                        <Button size="lg" className="bg-blue-600 hover:bg-blue-500 text-white px-8 py-6 text-xl font-bold rounded-sm transition-all shadow-[0_0_30px_rgba(37,99,235,0.2)]">
+                            Launch Live Portal
+                        </Button>
+                    </Link>
+                    <p className="mt-4 text-slate-500 font-mono text-[10px] uppercase tracking-[0.2em]">
+                        Strict NANO-Compliance Mode Enabled // Authentication Required
+                    </p>
+                </div>
+
+
 
                 {/* --- THE ENGINE FOR THE INTERFACE (AVALONIA) --- */}
                 <section className="max-w-5xl mx-auto px-6 py-8 border-t border-slate-900/50">
