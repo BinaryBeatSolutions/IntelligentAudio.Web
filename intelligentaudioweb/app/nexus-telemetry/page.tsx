@@ -15,7 +15,7 @@ export default function NexusTelemetryPage() {
                 <section className="text-center space-y-2 mb-4 pt-12 px-6">
                     <div className="">
                         <h3 className="text-blue-500 tracking-[0.3em] text-xs uppercase">The Observability Layer</h3>
-                        <h1 className="text-6xl lg:text-7xl font-bold tracking-tighter text-white">
+                        <h1 className="text-4xl lg:text-7xl font-bold tracking-tighter text-white">
                             Nexus<span className="text-blue-500">Telemetry</span>
                         </h1>
                     </div>
