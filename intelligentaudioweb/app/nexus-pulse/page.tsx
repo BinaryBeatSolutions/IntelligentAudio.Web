@@ -13,7 +13,7 @@ export default function NexusPulsePage() {
                 {/*HEADER*/ }
                 <section className="text-center space-y-8 mb-8">
                     <h1 className="text-4xl lg:text-7xl font-bold tracking-tighter text-white">
-                        Nexus<span className="text-blue-500">PULSE</span>
+                        Nexus<span className="text-blue-500">Pulse</span>
                     </h1>
                     <p className="sm:text-md md:text-2xl text-slate-400 max-w-3xl mx-auto font-light leading-relaxed">
                         Engineered with <span className="text-blue-400 font-medium whitespace-nowrap">the Zero-Latency Parameter Engine</span>
