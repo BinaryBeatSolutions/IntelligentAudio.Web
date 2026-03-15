@@ -10,16 +10,123 @@ export default function NexusPage() {
             <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(56,189,248,0.04),transparent)] pointer-events-none" />
             <main className="animate-in fade-in slide-in-from-bottom-4 duration-1000 ease-out relative max-w-6xl mx-auto px-6 ">
 
-                {/*HEADER*/ }
-                <section className="text-center space-y-8 mb-8">
-                    <h1 className="text-4xl lg:text-7xl font-bold tracking-tighter text-white">
-                        Nexus<span className="text-blue-500">Engine</span>
-                    </h1>
-                    <p className="sm:text-md md:text-2xl text-slate-400 max-w-3xl mx-auto font-light leading-relaxed">
-                        Engineered with <span className="text-blue-400 font-medium whitespace-nowrap">the Zero-Latency Parameter Engine</span>
-                    </p>
-                </section>
+                {/*HEADER*/}
 
+                <section className="text-center space-y-8 mb-8">
+    <h1 className="text-4xl lg:text-7xl font-bold tracking-tighter text-white">
+        Nexus<span className="text-blue-500">Engine</span>
+    </h1>
+    <div className="space-y-2">
+        <p className="sm:text-md md:text-2xl text-slate-400 max-w-3xl mx-auto font-light leading-relaxed">
+            Engineered with <span className="text-blue-400 font-medium whitespace-nowrap">the Zero-Latency Parameter Engine</span>
+        </p>
+        <p className="text-[10px] font-mono text-slate-600 uppercase tracking-[0.4em]">
+            Architecture: <span className="text-slate-400">Native AOT v2.1</span> <span className="mx-2">//</span> Pulse: <span className="text-slate-400">NXP Enabled</span>
+        </p>
+    </div>
+</section>
+
+
+
+
+                {/* --- NEXUS V2.1: THE DUAL-STREAM ARCHITECTURE --- */}
+                <section className="max-w-5xl mx-auto px-6 py-24">
+                    <Card className="bg-slate-950 border-blue-500/20 overflow-hidden relative rounded-none border-l-4 border-l-blue-500">
+                        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl -mr-48 -mt-48" />
+
+                        <CardHeader className="border-b border-slate-900 bg-slate-900/10 p-8">
+                            <div className="flex items-center justify-between">
+                                <div className="space-y-1">
+                                    <CardTitle className="text-2xl font-bold text-white tracking-tight">
+                                        NEXUS <span className="text-blue-500">V2.1</span> Architecture
+                                    </CardTitle>
+                                    <p className="text-xs font-mono text-slate-500 uppercase tracking-[0.2em]">
+                                        Verified Baseline: 8.72ns / Operations
+                                    </p>
+                                </div>
+                                <div className="hidden md:flex gap-2">
+                                    <Badge variant="outline" className="border-blue-500/30 text-blue-400 font-mono text-[10px]">L1-CACHE OPTIMIZED</Badge>
+                                    <Badge variant="outline" className="border-blue-500/30 text-blue-400 font-mono text-[10px]">NATIVE AOT</Badge>
+                                </div>
+                            </div>
+                        </CardHeader>
+
+                        <CardContent className="p-0">
+                            <div className="grid lg:grid-cols-2">
+                                {/* Left: Dual Stream Explanation */}
+                                <div className="p-8 space-y-8 border-b lg:border-b-0 lg:border-r border-slate-900">
+                                    <div className="space-y-4">
+                                        <h4 className="text-lg font-bold text-white flex items-center gap-2">
+                                            <Layers className="w-4 h-4 text-blue-500" />
+                                            Dual-Stream Management
+                                        </h4>
+                                        <p className="text-slate-400 text-sm leading-relaxed">
+                                            To eliminate <strong>Cache Pollution</strong>, NEXUS V2.1 separates real-time state from historical audit trails. This dual-stream approach ensures that high-frequency reads never collide with heavy time-series writes.
+                                        </p>
+                                    </div>
+
+                                    <div className="space-y-4">
+                                        <div className="p-4 bg-slate-900/30 border border-slate-800 rounded-sm">
+                                            <div className="flex justify-between items-center mb-2">
+                                                <span className="text-xs font-bold text-blue-400 uppercase tracking-widest">Index Stream</span>
+                                                <span className="text-[10px] font-mono text-slate-500">24-BYTE SLOTS</span>
+                                            </div>
+                                            <p className="text-xs text-slate-500 mb-2">Optimized for Latest State & High-Frequency Lookups.</p>
+                                            <code className="text-[10px] text-slate-300 font-mono bg-black/50 p-1 block">
+                                                Addr: Base + 64 + (Index * 24)
+                                            </code>
+                                        </div>
+
+                                        <div className="p-4 bg-slate-900/30 border border-slate-800 rounded-sm">
+                                            <div className="flex justify-between items-center mb-2">
+                                                <span className="text-xs font-bold text-blue-400 uppercase tracking-widest">Vault Stream</span>
+                                                <span className="text-[10px] font-mono text-slate-500">32-BYTE SLOTS</span>
+                                            </div>
+                                            <p className="text-xs text-slate-500 mb-2">Designed for Historical Audit & Time-Series Telemetry.</p>
+                                            <code className="text-[10px] text-slate-300 font-mono bg-black/50 p-1 block">
+                                                Addr: Base + 64 + (Index &lt;&lt; 5) // ULTRA-FAST SHIFT
+                                            </code>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Right: The Raw Metrics Table */}
+                                <div className="p-8 bg-black/20 flex flex-col justify-between">
+                                    <div className="space-y-4">
+                                        <h4 className="text-sm font-mono text-slate-500 uppercase tracking-widest mb-6">- Performance Benchmarks</h4>
+
+                                        <div className="space-y-4">
+                                            {[
+                                                { label: "Dual Write (Index+Vault)", val: "8.72 ns", desc: "Per 56-byte operation", color: "text-green-400" },
+                                                { label: "Sequential Read", val: "8.54 ns", desc: "Sub-nanosecond caching", color: "text-blue-400" },
+                                                { label: "Engine Throughput", val: "112M+", desc: "Entries per second", color: "text-white" },
+                                                { label: "Memory Saturation", val: "~6.4 GB/s", desc: "Theoretical Bus Peak", color: "text-slate-300" }
+                                            ].map((m) => (
+                                                <div key={m.label} className="flex justify-between items-end border-b border-slate-900 pb-2">
+                                                    <div className="space-y-1">
+                                                        <div className="text-[10px] text-slate-500 uppercase">{m.label}</div>
+                                                        <div className="text-[10px] text-slate-600 italic">{m.desc}</div>
+                                                    </div>
+                                                    <div className={`text-xl font-mono font-bold ${m.color}`}>{m.val}</div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    <div className="mt-8 pt-6 border-t border-slate-900">
+                                        <div className="flex items-center gap-2 text-blue-500/50 mb-2">
+                                            <Cpu size={14} />
+                                            <span className="text-[10px] font-mono uppercase">Hardware Sympathy Active</span>
+                                        </div>
+                                        <p className="text-[10px] text-slate-500 leading-relaxed italic">
+                                            Architecture verified for x64 Native AOT. Utilizing 64-byte alignment to match L1 Cache Line boundaries, preventing false sharing across 1,000,000 concurrent slots.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </CardContent>
+                    </Card>
+                </section>
                 {/* --- Nexus Engine: Shared Memory Section --- */}
                 <section className="max-w-5xl mx-auto px-6 pt-16 pb-4">
                     <div className="flex flex-col lg:flex-row gap-16 items-start">
@@ -63,6 +170,9 @@ export default function NexusPage() {
                         </div>
                     </div>
                 </section>
+
+
+              
 
 
                 {/* --- THE NANO STANDARD: THE NEW BASELINE --- */}
@@ -254,6 +364,7 @@ export default function NexusPage() {
                         ))}
                     </div>
                 </div>
+               
 
             </main>
         </div>
