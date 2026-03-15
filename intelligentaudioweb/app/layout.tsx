@@ -54,16 +54,8 @@ export const metadata: Metadata = {
     icons: {
         icon: '/icon.png',
         apple: '/apple-icon.png',
-    },
-    twitter: {
-        card: 'summary_large_image',
-        title: 'IntelligentAudio.NET',
-        description: 'Zero-copy audio processing for .NET 10.',
-        images: ['https://intelligentaudio.net'],
-    },
+    }
 };
-
-
 
 export default function RootLayout({
     children,
@@ -78,7 +70,7 @@ export default function RootLayout({
                     {/* Global Badge för alla sidor */}
                     <div className="flex justify-center ">
                         <Badge variant="outline" className="border-blue-500/30 text-blue-400 bg-blue-500/5 px-4 py-1 mb-8 animate-pulse font-mono text-[10px] tracking-widest">
-                            .NET 10 LTS + HIGH PRECISION AUDIO
+                            .NET 10 LTS + Baseline V2.1 | Dual-Stream
                         </Badge>
                     </div>
                     {children}
