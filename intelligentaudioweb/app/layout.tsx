@@ -54,16 +54,8 @@ export const metadata: Metadata = {
     icons: {
         icon: '/icon.png',
         apple: '/apple-icon.png',
-    },
-    twitter: {
-        card: 'Telemetry NEXUS',
-        title: 'IntelligentAudio.NET',
-        description: 'Zero-copy audio processing for .NET 10.',
-        images: ['https://intelligentaudio.net'],
-    },
+    }
 };
-
-
 
 export default function RootLayout({
     children,
