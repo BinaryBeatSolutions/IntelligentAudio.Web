@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Brain, Mic, Search, Zap, Code2, Network, Terminal, Cpu, Layers, Box, Shield, TrendingDown, ArrowRight, Globe, Cloud } from "lucide-react"
+import { Brain, Mic, Search, Zap, Code2, Network, Terminal, Cpu, Layers, Box, Shield, TrendingDown, ArrowRight, Globe, Cloud, ExternalLink } from "lucide-react"
 import Link from "next/link"
 
 export default function NexusPulsePage() {
@@ -67,6 +67,117 @@ export default function NexusPulsePage() {
                         <div className="text-[10px] uppercase tracking-[0.2em] text-slate-500 mt-1">Symmetrical Frame</div>
                     </div>
                 </section>
+                {/* VERIFIED PERFORMANCE REPORT */}
+                <section className="mb-32">
+                    <Card className="bg-slate-950 border-blue-500/20 overflow-hidden relative">
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl -mr-32 -mt-32" />
+                        <CardHeader className="border-b border-slate-900 bg-slate-900/20">
+                            <div className="flex items-center justify-between">
+                                <CardTitle className="text-sm font-mono text-blue-400 flex items-center gap-2">
+                                    <Terminal size={16} /> NEXUS V2.1 — VERIFIED BASELINE
+                                </CardTitle>
+                                <Badge className="bg-green-500/10 text-green-500 border-green-500/20">Native AOT x64</Badge>
+                            </div>
+                        </CardHeader>
+                        <CardContent className="p-0">
+                            <div className="grid md:grid-cols-2">
+                                {/* Left Side: The Narrative */}
+                                <div className="p-8 border-b md:border-b-0 md:border-r border-slate-900 space-y-6">
+                                    <h3 className="text-2xl font-bold text-white tracking-tight">
+                                        Operating at the <br />
+                                        <span className="text-blue-500">Physical Memory Limit.</span>
+                                    </h3>
+                                    <p className="text-slate-400 text-sm leading-relaxed">
+                                        By eliminating traditional serialization and leveraging <strong>DMA Pointer Access</strong>, the NEXUS core operates at a verified latency of <span className="text-white font-mono">8.72ns</span> per slot.
+                                        This enables a theoretical throughput of over <span className="text-white font-bold text-lg">112,000,000</span> entries per second — effectively saturating the hardware memory bus.
+                                    </p>
+                                    <div className="pt-4 flex gap-8">
+                                        <div>
+                                            <div className="text-2xl font-mono text-white">8.72<span className="text-xs text-slate-500 ml-1">ns</span></div>
+                                            <div className="text-[10px] uppercase text-slate-500 tracking-widest">Sequential Write</div>
+                                        </div>
+                                        <div>
+                                            <div className="text-2xl font-mono text-white">112<span className="text-xs text-slate-500 ml-1">M/s</span></div>
+                                            <div className="text-[10px] uppercase text-slate-500 tracking-widest">Throughput Capacity</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="bg-black/40 p-8 font-mono text-[11px] leading-relaxed text-slate-300">
+                                    <div className="text-slate-500 mb-4 uppercase tracking-widest">// Metrics & Architecture</div>
+                                    <div className="space-y-3">
+                                        <div className="flex justify-between border-b border-slate-900 pb-1">
+                                            <span className="text-slate-500 italic italic">Core Latency (1M Slots)</span>
+                                            <span className="text-green-400">8.72 ns / slot</span>
+                                        </div>
+                                        <div className="flex justify-between border-b border-slate-900 pb-1">
+                                            <span className="text-slate-500 italic italic">Lifecycle Execution</span>
+                                            <span className="text-blue-400">17.79 ms (Full Batch)</span>
+                                        </div>
+                                        <div className="flex justify-between border-b border-slate-900 pb-1">
+                                            <span className="text-slate-500 italic italic">Vault Stream Math</span>
+                                            <span className="text-slate-400 italic">Base + 64 + (i &lt;&lt; 5)</span>
+                                        </div>
+                                        <div className="flex justify-between border-b border-slate-900 pb-1">
+                                            <span className="text-slate-500 italic italic">Memory Layout</span>
+                                            <span className="text-slate-400 italic">Symmetric 32-byte Vault Slots</span>
+                                        </div>
+                                        <div className="flex justify-between border-b border-slate-900 pb-1">
+                                            <span className="text-slate-500 italic italic">Relay Strategy</span>
+                                            <span className="text-slate-400 italic">Zero-Copy Binary NXP Relay</span>
+                                        </div>
+                                    </div>
+                                    <div className="mt-6 p-3 bg-blue-500/5 border border-blue-500/10 rounded">
+                                        <p className="text-blue-400 text-[10px] leading-snug">
+                                            <strong>Architect&apos;s Note:</strong> At this scale, software performance is dictated by the L1 cache. Any regression exceeding 0.5ns is considered a violation of the NXP core principles.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </CardContent>
+                    </Card>
+                </section>
+
+
+
+                <section className="max-w-5xl mx-auto px-6 py-8 pb-32 text-center">
+    <div className="space-y-8">
+        <h2 className="text-2xl lg:text-4xl font-bold text-white tracking-tighter">
+            Theory is nothing without <span className="text-blue-500 italic">Proof.</span>
+        </h2>
+        <p className="text-slate-500 max-w-3xl mx-auto leading-relaxed">
+            While the NXP engine operates at a verified core latency of <span className="text-blue-400">8.72ns</span>, 
+            true transparency requires visibility. Explore the live telemetry or dive into the 
+            technical architecture behind the DDR5 saturation.
+        </p>
+
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+            {/* Live Dashboard Button */}
+            <a href="/nexus-telemetry" className="w-full sm:w-auto inline-flex items-center gap-3 px-8 py-4 bg-blue-600 text-white font-bold rounded-sm hover:bg-blue-500 transition-all group">
+                Explore Live Telemetry
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </a>
+
+            {/* GitHub Documentation Button */}
+            <a 
+                href="https://github.com/BinaryBeatSolutions/telemetry.intelligentaudio.net" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-full sm:w-auto inline-flex items-center gap-3 px-8 py-4 bg-transparent border border-slate-700 text-slate-300 font-bold rounded-sm hover:border-blue-500 hover:text-white transition-all group"
+            >
+                Technical Specification (GitHub)
+                <ExternalLink className="w-4 h-4 group-hover:text-blue-400 transition-colors" />
+            </a>
+        </div>
+
+        <p className="text-[10px] font-mono text-slate-700 uppercase tracking-[0.4em] pt-4">
+            Architecture: NXP V2.1 | Core Latency: 8.72ns | Protocol: Shared Memory (MMF)
+        </p>
+    </div>
+                </section>
+
+
+
 
 {/* THE PROTOCOL EXPLAINER */}
 <section className="grid lg:grid-cols-2 gap-12 items-center mb-24">
@@ -121,77 +232,7 @@ export default function NexusPulsePage() {
     </div>
                 </section>
 
-                {/* VERIFIED PERFORMANCE REPORT */}
-                <section className="mb-32">
-                    <Card className="bg-slate-950 border-blue-500/20 overflow-hidden relative">
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl -mr-32 -mt-32" />
-                        <CardHeader className="border-b border-slate-900 bg-slate-900/20">
-                            <div className="flex items-center justify-between">
-                                <CardTitle className="text-sm font-mono text-blue-400 flex items-center gap-2">
-                                    <Terminal size={16} /> NEXUS V2.1 — VERIFIED BASELINE
-                                </CardTitle>
-                                <Badge className="bg-green-500/10 text-green-500 border-green-500/20">Native AOT x64</Badge>
-                            </div>
-                        </CardHeader>
-                        <CardContent className="p-0">
-                            <div className="grid md:grid-cols-2">
-                                {/* Left Side: The Narrative */}
-                                <div className="p-8 border-b md:border-b-0 md:border-r border-slate-900 space-y-6">
-                                    <h3 className="text-2xl font-bold text-white tracking-tight">
-                                        Operating at the <br />
-                                        <span className="text-blue-500">Physical Memory Limit.</span>
-                                    </h3>
-                                    <p className="text-slate-400 text-sm leading-relaxed">
-                                        By eliminating traditional serialization and leveraging <strong>DMA Pointer Access</strong>, the NEXUS core operates at a verified latency of <span className="text-white font-mono">8.72ns</span> per slot.
-                                        This enables a theoretical throughput of over <span className="text-white font-bold text-lg">112,000,000</span> entries per second — effectively saturating the hardware memory bus.
-                                    </p>
-                                    <div className="pt-4 flex gap-8">
-                                        <div>
-                                            <div className="text-2xl font-mono text-white">8.72<span className="text-xs text-slate-500 ml-1">ns</span></div>
-                                            <div className="text-[10px] uppercase text-slate-500 tracking-widest">Sequential Write</div>
-                                        </div>
-                                        <div>
-                                            <div className="text-2xl font-mono text-white">112<span className="text-xs text-slate-500 ml-1">M/s</span></div>
-                                            <div className="text-[10px] uppercase text-slate-500 tracking-widest">Throughput Capacity</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/* Right Side: Technical Specs */}
-                                <div className="bg-black/40 p-8 font-mono text-[11px] leading-relaxed text-slate-300">
-                                    <div className="text-slate-500 mb-4 uppercase tracking-widest">// Metrics & Architecture</div>
-                                    <div className="space-y-3">
-                                        <div className="flex justify-between border-b border-slate-900 pb-1">
-                                            <span className="text-slate-500 italic italic">Core Latency (1M Slots)</span>
-                                            <span className="text-green-400">8.72 ns / slot</span>
-                                        </div>
-                                        <div className="flex justify-between border-b border-slate-900 pb-1">
-                                            <span className="text-slate-500 italic italic">Lifecycle Execution</span>
-                                            <span className="text-blue-400">17.79 ms (Full Batch)</span>
-                                        </div>
-                                        <div className="flex justify-between border-b border-slate-900 pb-1">
-                                            <span className="text-slate-500 italic italic">Vault Stream Math</span>
-                                            <span className="text-slate-400 italic">Base + 64 + (i &lt;&lt; 5)</span>
-                                        </div>
-                                        <div className="flex justify-between border-b border-slate-900 pb-1">
-                                            <span className="text-slate-500 italic italic">Memory Layout</span>
-                                            <span className="text-slate-400 italic">Symmetric 32-byte Vault Slots</span>
-                                        </div>
-                                        <div className="flex justify-between border-b border-slate-900 pb-1">
-                                            <span className="text-slate-500 italic italic">Relay Strategy</span>
-                                            <span className="text-slate-400 italic">Zero-Copy Binary NXP Relay</span>
-                                        </div>
-                                    </div>
-                                    <div className="mt-6 p-3 bg-blue-500/5 border border-blue-500/10 rounded">
-                                        <p className="text-blue-400 text-[10px] leading-snug">
-                                            <strong>Architect&apos;s Note:</strong> At this scale, software performance is dictated by the L1 cache. Any regression exceeding 0.5ns is considered a violation of the NXP core principles.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </CardContent>
-                    </Card>
-                </section>
+ 
 
 
 
