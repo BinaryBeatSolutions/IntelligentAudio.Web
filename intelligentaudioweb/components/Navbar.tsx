@@ -92,7 +92,7 @@ export default function Navbar() {
 
                     {/* DIRECT LINKS */}
                     <div className="flex items-center gap-4 ml-4 pl-4 border-l border-white/10">
-                        <Link href="https://github.com/IntelligentAudio.NET" target="_blank" className="text-muted-foreground hover:text-white transition-colors">
+                        <Link href="https://github.com/BinaryBeatSolutions/IntelligentAudio" target="_blank" className="text-muted-foreground hover:text-white transition-colors">
                             <Github className="h-4 w-4" />
                         </Link>
                         <Link href="https://www.linkedin.com/in/binarybeats/" target="_blank" className="text-muted-foreground hover:text-white transition-colors">

@@ -19,18 +19,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-
-
-// 1. Bryt ut viewport helt (Vercel kräver detta nu)
+//Allow scaling.
 export const viewport: Viewport = {
-    width: "device-width",
+    width: 'device-width',
     initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
     themeColor: "#020617",
 };
 
-// 2. Renodlad metadata utan viewport-strängen
 export const metadata: Metadata = {
     manifest: "/manifest.json",
     title: "IntelligentAudio.NET",
