@@ -80,11 +80,7 @@ graph TD
 export default function SystemDesignPage() {
     return (
 
-        <div className="min-h-screen bg-[#02040a] text-slate-50 font-sans selection:bg-blue-500/30">
-            <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(56,189,248,0.04),transparent)] pointer-events-none" />
-
-            <main className="animate-in fade-in slide-in-from-bottom-4 duration-1000 ease-out relative max-w-6xl mx-auto px-6 ">
-              
+        <div>
                 <div className="max-w-6xl mx-auto p-8 space-y-8">
             <div className="space-y-2">
                         <h1 className="text-4xl lg:text-7xl font-bold tracking-tight">System <span className="text-blue-500">Architecture</span></h1>
@@ -231,12 +227,6 @@ export default function SystemDesignPage() {
 
 
                 </div>
-
-            </main>
         </div>    
-        
-        
-    
-        
     );
 }

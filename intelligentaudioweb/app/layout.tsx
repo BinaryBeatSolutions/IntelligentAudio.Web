@@ -7,6 +7,7 @@ import Footer from "@/components/footer";
 import Navbar from "@/components/Navbar";
 import { Badge } from "@/components/ui/badge"
 import NeuralBottomBar from "../components/NeuralBottomBar";
+import NexusTerminal from "../components/NexusTerminal";
 
 
 const geistSans = Geist({
@@ -28,11 +29,11 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
     manifest: "/manifest.json",
-    title: "IntelligentAudio.NET",
-    description: "IntelligentAudio.NET",
+    title: "NEXUS: by IntelligentAudio.NET",
+    description: "NEXUS ECOSYSTEM",
     openGraph: {
         title: 'IntelligentAudio.NET',
-        description: 'Ultra-low latency audio middleware for the AI era.',
+        description: 'Ultra-low latency hardware to hardware for the AI era.',
         url: 'https://intelligentaudio.net',
         siteName: 'IntelligentAudio.NET',
         images: [
@@ -64,15 +65,32 @@ export default function RootLayout({
                 <main className="flex-1 container mx-auto px-4 pt-8">
                     {/* Global Badge för alla sidor */}
                     <div className="flex justify-center ">
-                        <Badge variant="outline" className="border-blue-500/30 text-blue-400 bg-blue-500/5 px-4 py-1 mb-8 animate-pulse font-mono text-[10px] tracking-widest">
+                        <Badge variant="outline" className="border-blue-500/30 text-blue-400 bg-blue-500/5 px-4 py-1 mb-12 animate-pulse font-mono text-[10px] tracking-widest">
                             .NET 10 LTS + Baseline V2.1 | Dual-Stream
                         </Badge>
                     </div>
-                    {children}
-                    <Analytics/>
-                </main>
+                    <div className="min-h-screen bg-[#02040a] text-slate-50 font-sans selection:bg-blue-500/30">
+                        {/* BACKGROUND LAYER */}
+                        <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(56,189,248,0.06),transparent)] pointer-events-none" />
+                        <div className="fixed inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-10 pointer-events-none" />
+
+                        <div className="animate-in fade-in slide-in-from-bottom-4 duration-1000 ease-out relative max-w-6xl mx-auto py-12">
+                            {children}
+
+                            <Analytics />
+                        </div>
+                    </div>
+                   </main>
                 <Footer />
-                <NeuralBottomBar /> 
+                {/* TERMINAL */}
+                <div className="fixed bottom-28 right-8 z-[100]">
+                    <NexusTerminal />
+                </div>
+
+                {/* NEURAL BAR */}
+                <div className="fixed bottom-0 w-full z-[80]">
+                    <NeuralBottomBar />
+                </div>
             </body>
         </html>
     );

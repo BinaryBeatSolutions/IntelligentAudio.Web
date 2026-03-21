@@ -6,27 +6,95 @@ import Link from "next/link"
 
 export default function NexusPage() {
     return (
-        <div className="min-h-screen bg-[#02040a] text-slate-50 font-sans selection:bg-blue-500/30">
-            <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(56,189,248,0.04),transparent)] pointer-events-none" />
-            <main className="animate-in fade-in slide-in-from-bottom-4 duration-1000 ease-out relative max-w-6xl mx-auto px-6 ">
+        <div>
 
-                {/*HEADER*/}
-
-                <section className="text-center space-y-8 mb-8">
-    <h1 className="text-4xl lg:text-7xl font-bold tracking-tighter text-white">
-        Nexus<span className="text-blue-500">Engine</span>
-    </h1>
-    <div className="space-y-2">
-        <p className="sm:text-md md:text-2xl text-slate-400 max-w-3xl mx-auto font-light leading-relaxed">
-            Engineered with <span className="text-blue-400 font-medium whitespace-nowrap">the Zero-Latency Parameter Engine</span>
-        </p>
-        <p className="text-[10px] font-mono text-slate-600 uppercase tracking-[0.4em]">
-            Architecture: <span className="text-slate-400">Native AOT v2.1</span> <span className="mx-2">//</span> Pulse: <span className="text-slate-400">NXP Enabled</span>
-        </p>
-    </div>
-</section>
+            {/*HEADER*/}
+            <section className="text-center space-y-8 mb-8">
+                <h1 className="text-4xl lg:text-7xl font-bold tracking-tighter text-white">
+                    Nexus<span className="text-blue-500">Engine</span>
+                </h1>
+                <div className="space-y-2">
+                    <p className="sm:text-md md:text-2xl text-slate-400 max-w-3xl mx-auto font-light leading-relaxed">
+                        Engineered with <span className="text-blue-400 font-medium whitespace-nowrap">the Zero-Latency Parameter Engine</span>
+                    </p>
+                    <p className="text-[10px] font-mono text-slate-600 uppercase tracking-[0.4em]">
+                        Architecture: <span className="text-slate-400">Native AOT v2.1</span> <span className="mx-2">//</span> Pulse: <span className="text-slate-400">NXP Enabled</span>
+                    </p>
+                </div>
+            </section>
 
 
+            {/* --- THE UNTOUCHED POWER: CPU & DDR5 DOMINANCE --- */}
+            <section className="w-full py-24 border-y border-slate-900 bg-black/40 relative overflow-hidden">
+                {/* Subtle amber pulse to signal "Idle Power" */}
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-amber-500/20 to-transparent animate-pulse" />
+
+                <div className="max-w-5xl mx-auto px-6">
+                    <div className="flex flex-col md:flex-row items-start justify-between mb-12 gap-8">
+                        <div className="space-y-4">
+                            <div className="flex items-center gap-3">
+                                <div className="h-[1px] w-12 bg-amber-500"></div>
+                                <span className="text-[10px] font-mono text-amber-500 uppercase tracking-[0.4em]">Hardware-Bound Efficiency</span>
+                            </div>
+                            <h2 className="text-4xl md:text-7xl font-black text-white tracking-tighter uppercase leading-[0.9]">
+                                PURE CPU POWER. <br />
+                                <span className="text-slate-800">GPU UNTOUCHED.</span>
+                            </h2>
+                            <p className="text-amber-500/80 font-mono text-xs uppercase tracking-[0.3em]">Optimized for DDR5 Memory Architecture</p>
+                        </div>
+
+                        <div className="p-6 border border-slate-800 bg-slate-950 min-w-[320px] shadow-2xl shadow-amber-500/5">
+                            <p className="text-[10px] font-mono text-slate-500 uppercase mb-4 tracking-widest text-center border-b border-slate-900 pb-2">Verified Baseline: NXP Core</p>
+                            <div className="space-y-4">
+                                <div className="flex justify-between items-center">
+                                    <span className="text-xs text-slate-400 font-mono">CPU</span>
+                                    <span className="text-xs font-mono text-white text-right font-bold">i7 (20-core) // 24MB L3</span>
+                                </div>
+                                <div className="flex justify-between items-center">
+                                    <span className="text-xs text-slate-400 font-mono">MEMORY</span>
+                                    <span className="text-xs font-mono text-white text-right font-bold tracking-tighter">DDR5 High-Speed Channel</span>
+                                </div>
+                                <div className="flex justify-between items-center">
+                                    <span className="text-xs text-slate-400 font-mono">GPU STATUS</span>
+                                    <span className="text-xs font-mono text-amber-500 font-black uppercase tracking-widest animate-pulse">IDLE (0% LOAD)</span>
+                                </div>
+                                <div className="flex justify-between items-center border-t border-slate-900 pt-3">
+                                    <span className="text-xs text-white font-black uppercase tracking-widest">RESULT</span>
+                                    <div className="text-right">
+                                        <div className="text-2xl font-mono font-black text-white">17.79 ms</div>
+                                        <div className="text-[9px] text-slate-600 font-mono italic leading-none">1,000,000 Slots Lifecycle</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                        <div className="space-y-6">
+                            <p className="text-xl text-slate-400 leading-relaxed font-light">
+                                Most systems need a <strong className="text-white">$40,000 GPU</strong> just to keep up with basic telemetry. <span className="text-white font-bold tracking-tight">We haven't even turned the GPU on yet.</span>
+                            </p>
+                            <p className="text-lg text-slate-500 leading-relaxed italic border-l-2 border-slate-800 pl-6">
+                                By combining <strong>DDR5 high-bandwidth memory</strong> with direct 64-byte L1 alignment, NEXUS.Quantum extracts 100% of the CPU's potential without software-level memory contention.
+                            </p>
+                        </div>
+
+                        <div className="relative p-10 border-l-4 border-amber-600 bg-slate-900/40">
+                            <span className="absolute top-4 right-6 text-[10px] font-mono text-slate-600 uppercase tracking-widest">The Architect’s Logic</span>
+                            <blockquote className="text-2xl font-light text-slate-200 leading-tight italic">
+                                "Our 8.72 ns latency is achieved through pure instruction optimization on <strong>DDR5 architecture.</strong> When we ignite the GPU-bridge, we're not just scaling; we're <span className="text-amber-500 font-bold">rewriting the rules of physics.</span>"
+                            </blockquote>
+                        </div>
+                    </div>
+
+                    <div className="mt-12 flex flex-wrap gap-4 opacity-60 hover:opacity-100 transition-opacity">
+                        <Badge variant="outline" className="border-amber-500/20 text-amber-500 font-mono text-[9px] uppercase tracking-widest">DDR5 Bandwidth: Saturated</Badge>
+                        <Badge variant="outline" className="border-slate-800 text-slate-500 font-mono text-[9px] uppercase tracking-widest">Pointer Access: Direct</Badge>
+                        <Badge variant="outline" className="border-slate-800 text-slate-500 font-mono text-[9px] uppercase tracking-widest">Context Swapping: 0</Badge>
+                        <Badge variant="outline" className="border-slate-800 text-slate-500 font-mono text-[9px] uppercase tracking-widest">AOT Native Execution</Badge>
+                    </div>
+                </div>
+            </section>
 
 
                 {/* --- NEXUS V2.1: THE DUAL-STREAM ARCHITECTURE --- */}
@@ -316,7 +384,7 @@ export default function NexusPage() {
                         Nexus doesn't work in isolation. When a new VST or Parameter is discovered,
                         the engine initiates a <strong>0-RTT handshake</strong> via Vercel Edge.
                         Metadata is fetched over <strong>HTTP/3 (QUIC)</strong> and patched directly
-                        into the local MMF registry—seamlessly expanding the engine's knowledge
+                        into the local MMF registry—seamlessly expanding the engine&#39;s knowledge
                         without ever dropping a sample.
                     </p>
 
@@ -364,9 +432,6 @@ export default function NexusPage() {
                         ))}
                     </div>
                 </div>
-               
-
-            </main>
         </div>
     );
 }

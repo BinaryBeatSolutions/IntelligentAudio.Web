@@ -6,10 +6,7 @@ import Link from "next/link"
 
 export default function NexusPulsePage() {
     return (
-        <div className="min-h-screen bg-[#02040a] text-slate-50 font-sans selection:bg-blue-500/30">
-            <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(56,189,248,0.04),transparent)] pointer-events-none" />
-            <main className="animate-in fade-in slide-in-from-bottom-4 duration-1000 ease-out relative max-w-6xl mx-auto px-6 ">
-
+        <div>
                 {/*HEADER*/ }
                 <section className="text-center space-y-8 mb-8">
                     <h1 className="text-4xl lg:text-7xl font-bold tracking-tighter text-white">
@@ -21,32 +18,32 @@ export default function NexusPulsePage() {
                 </section>
 
                 <section className="mt-32 mb-20 text-center space-y-6">
-    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 mb-4">
-        <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-        </span>
-        <span className="text-[10px] font-mono text-blue-400 uppercase tracking-[0.2em]">New Standard: NXP://</span>
-    </div>
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 mb-4">
+                        <span className="relative flex h-2 w-2">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                        </span>
+                        <span className="text-[10px] font-mono text-blue-400 uppercase tracking-[0.2em]">New Standard: NXP://</span>
+                    </div>
     
-    <h2 className="text-4xl lg:text-6xl font-bold tracking-tight text-white">
-        Beyond <span className="text-slate-500">HTTP.</span> Beyond <span className="text-slate-500">gRPC.</span>
-    </h2>
+                    <h2 className="text-4xl lg:text-6xl font-bold tracking-tight text-white">
+                        Beyond <span className="text-slate-500">HTTP.</span> Beyond <span className="text-slate-500">gRPC.</span>
+                    </h2>
     
-    <p className="text-xl text-slate-400 max-w-2xl mx-auto font-light">
-        Introducing <span className="text-white font-mono">nxp://</span> – a specialized binary exchange protocol engineered for deterministic telemetry and high-frequency data streams.
-    </p>
+                    <p className="text-xl text-slate-400 max-w-2xl mx-auto font-light">
+                        Introducing <span className="text-white font-mono">nxp://</span> – a specialized binary exchange protocol engineered for deterministic telemetry and high-frequency data streams.
+                    </p>
 
-    {/* PROTOCOL URI EXAMPLE */}
-    <div className="max-w-xl mx-auto mt-10 p-4 bg-slate-950 rounded-lg border border-slate-800 font-mono text-sm relative group">
-        <div className="absolute -top-3 left-4 px-2 bg-[#02040a] text-[10px] text-slate-500 uppercase tracking-widest">
-            Connection String
-        </div>
-        <code className="text-blue-400">
-            nxp://<span className="text-white">pulse.intelligentaudio.net</span>:<span className="text-blue-300">8080</span>/<span className="text-slate-500">live</span>
-        </code>
-    </div>
-</section>
+                    {/* PROTOCOL URI EXAMPLE */}
+                    <div className="max-w-xl mx-auto mt-10 p-4 bg-slate-950 rounded-lg border border-slate-800 font-mono text-sm relative group">
+                        <div className="absolute -top-3 left-4 px-2 bg-[#02040a] text-[10px] text-slate-500 uppercase tracking-widest">
+                            Connection String
+                        </div>
+                        <code className="text-blue-400">
+                            nxp://<span className="text-white">pulse.intelligentaudio.net</span>:<span className="text-blue-300">8080</span>/<span className="text-slate-500">live</span>
+                        </code>
+                    </div>
+                </section>
 
 
                 {/* PERFORMANCE METRICS GRID */}
@@ -231,12 +228,6 @@ export default function NexusPulsePage() {
                         </div>
     </div>
                 </section>
-
- 
-
-
-
-             </main>
         </div>
     );
 }

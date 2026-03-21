@@ -8,9 +8,7 @@ import Link from "next/link"
 
 export default function NexusTelemetryPage() {
     return (
-    <div className="min-h-screen bg-[#02040a] text-slate-50 font-sans selection:bg-blue-500/30">
-    <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(56,189,248,0.04),transparent)] pointer-events-none" />
-            <main className="animate-in fade-in slide-in-from-bottom-4 duration-1000 ease-out relative max-w-6xl mx-auto px-6 ">
+    <div>
 
                 <section className="text-center space-y-2 mb-4 pt-12 px-6">
                     <div className="">
@@ -160,9 +158,6 @@ export default function NexusTelemetryPage() {
                         ))}
                     </div>
                 </div>
-
-
-            </main>
      </div>
 
 )}

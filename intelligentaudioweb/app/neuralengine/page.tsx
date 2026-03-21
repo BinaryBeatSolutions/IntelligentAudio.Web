@@ -7,12 +7,9 @@ import InferenceWorker from "../../components/InterferenceWorker"
 
 export default function NeuralEnginePage() {
     return (
-        <div className="min-h-screen bg-[#02040a] text-slate-50 font-sans selection:bg-blue-500/30">
-            {/* Syncade bakgrundselement från startsidan */}
-            <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.04),transparent)] pointer-events-none" />
+        <div>
 
-            <main className="animate-in fade-in slide-in-from-bottom-4 duration-1000 ease-out relative max-w-6xl mx-auto px-6 py-2">
-
+          
                 {/* HERO SECTION */}
                 <section className="text-center space-y-8 mb-20">
                   
@@ -160,7 +157,6 @@ export default function NeuralEnginePage() {
 
 
 
-             </main>
         </div>
     )
 }
